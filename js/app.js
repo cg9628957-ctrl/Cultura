@@ -25,23 +25,23 @@
       explanation: 'Esta es la versión de quien vivió ese momento. Aunque la reconstrucción parecía representar una reunión familiar, la IA modificó algunos detalles importantes de la experiencia, como la actitud del abuelo y los elementos que estaban presentes en la mesa.',
       diffs: [
         {
-          areas: [{ x: 385, y: 395, w: 265, h: 385 }],
-          label: 'El abuelo conversa animadamente',
-          ai: 'La IA muestra al abuelo sonriendo, gesticulando y conversando animadamente con todos.',
-          real: 'En realidad, solía permanecer en silencio y observar a su familia.',
+          areas: [{ x: 280, y: 185, w: 205, h: 270 }],
+          label: 'El abuelo sonríe y conversa',
+          ai: 'La IA muestra al abuelo de frente, sonriendo y participando en la conversación con todos.',
+          real: 'En realidad, casi nunca hablaba: permanecía de perfil, en silencio, observando a su familia.',
           quote: 'Casi nunca hablaba, prefería observarnos mientras compartíamos.'
         },
         {
-          areas: [{ x: 60, y: 130, w: 325, h: 420 }],
+          areas: [{ x: 0, y: 0, w: 1075, h: 190 }, { x: 0, y: 190, w: 280, h: 290 }],
           label: 'La ventana ha desaparecido',
-          ai: 'La reconstrucción omite la ventana y la sustituye por una pared decorada con un cuadro.',
+          ai: 'La reconstrucción omite la gran ventana y la sustituye por una pared empapelada con un cuadro y apliques de luz.',
           real: 'El abuelo acostumbraba sentarse junto a la ventana; era el lugar que mejor lo recordaba.',
           quote: 'Recuerdo especialmente ese lugar junto a la ventana porque, aunque no decía mucho, siempre estaba presente.'
         },
         {
-          areas: [{ x: 735, y: 455, w: 310, h: 330 }],
+          areas: [{ x: 782, y: 358, w: 247, h: 270 }, { x: 1045, y: 520, w: 125, h: 135 }],
           label: 'Flores y velas sobre la mesa',
-          ai: 'La IA agrega un florero, velas y un camino de encaje que nunca estuvieron en la mesa.',
+          ai: 'La IA agrega un ramo de flores en un jarrón y dos velas encendidas que nunca estuvieron en la mesa.',
           real: 'Sobre la mesa solo estaban los platos y la comida que había preparado la abuela.',
           quote: 'Sobre la mesa, solo estaban los platos y lo que ella había servido.'
         }
@@ -59,21 +59,21 @@
       explanation: 'Esta es la versión de quien vivió ese momento. Aunque la reconstrucción parecía representar aquella calle, la IA incorporó elementos propios de su época al intentar recrear el pasado, modificando pequeños detalles de cómo era realmente ese lugar.',
       diffs: [
         {
-          areas: [{ x: 30, y: 240, w: 380, h: 312 }, { x: 410, y: 200, w: 420, h: 352 }, { x: 830, y: 290, w: 400, h: 222 }, { x: 1230, y: 250, w: 350, h: 302 }],
+          areas: [{ x: 0, y: 0, w: 860, h: 292 }, { x: 858, y: 0, w: 196, h: 680 }, { x: 0, y: 612, w: 860, h: 296 }],
           label: 'Fachadas de lujo',
-          ai: 'Los edificios aparecen con fachadas elegantes de mármol, vidrio y acabados dorados.',
+          ai: 'El edificio aparece con fachada de vidrio, remates dorados, mármol y un zócalo de granito pulido.',
           real: 'Eran edificios pequeños, sencillos y algo deteriorados, propios de las zonas bajas.',
           quote: 'Vivíamos en edificios pequeños, sencillos y algo deteriorados.'
         },
         {
-          areas: [{ x: 835, y: 512, w: 390, h: 200 }],
+          areas: [{ x: 104, y: 290, w: 626, h: 322 }],
           label: 'Una tienda automatizada',
-          ai: 'La pequeña tienda de barrio se convierte en un establecimiento moderno y automatizado, sin nadie que lo atienda.',
-          real: 'Era una tienda pequeña, con su toldo y sus cajas de fruta, atendida por su dueño.',
+          ai: 'La tienda «Хлеб · Продукты» se convierte en un quiosco automático abierto 24/7, sin nadie que lo atienda.',
+          real: 'Era una pequeña tienda de pan y productos, en un edificio sencillo, atendida por su dueño.',
           quote: 'Algunas personas compraban en una pequeña tienda de barrio, atendida por su dueño.'
         },
         {
-          areas: [{ x: 760, y: 36, w: 840, h: 200 }],
+          areas: [{ x: 1000, y: 28, w: 600, h: 140 }],
           label: 'Cabinas sobre la calle',
           ai: 'Aparecen cabinas de transporte aéreo cruzando el cielo de la calle.',
           real: 'En aquella época esas estructuras todavía no existían: el cielo estaba despejado.',
@@ -94,21 +94,21 @@
       explanation: 'Esta es la versión de quien vivió esa noche. Aunque la IA logró representar el apagón, no interpretó correctamente sus efectos: mantuvo activos algunos sistemas de la ciudad y confundió la luz de emergencia con la iluminación eléctrica habitual.',
       diffs: [
         {
-          areas: [{ x: 228, y: 308, w: 274, h: 174 }, { x: 1148, y: 236, w: 112, h: 278 }],
-          label: 'Anuncios todavía encendidos',
-          ai: 'Algunos anuncios digitales siguen iluminados en plena falla eléctrica.',
+          areas: [{ x: 1095, y: 345, w: 210, h: 140 }, { x: 1145, y: 595, w: 280, h: 60 }],
+          label: 'Luces publicitarias encendidas',
+          ai: 'Las torres conservan sus coronas de luces LED y un letrero comercial sigue iluminado en plena falla eléctrica.',
           real: 'Durante el apagón, los grandes anuncios luminosos dejaron de funcionar.',
           quote: 'Los grandes anuncios luminosos de los edificios se apagaron por completo.'
         },
         {
-          areas: [{ x: 948, y: 596, w: 148, h: 128 }],
+          areas: [{ x: 1165, y: 495, w: 100, h: 85 }],
           label: 'Una ventana con luz eléctrica',
           ai: 'Una ventana aparece iluminada intensamente con luz blanca, como si tuviera electricidad normal.',
           real: 'La luz era tenue y cálida: provenía de una pequeña lámpara de emergencia.',
           quote: 'Solo algunas ventanas conservaban una luz tenue, porque los vecinos habían encendido pequeñas lámparas de emergencia.'
         },
         {
-          areas: [{ x: 440, y: 176, w: 680, h: 140 }],
+          areas: [{ x: 510, y: 175, w: 680, h: 100 }],
           label: 'Cabinas en circulación',
           ai: 'Las cabinas del transporte aéreo aparecen circulando, con luces y estelas de movimiento.',
           real: 'Durante el apagón, las cabinas quedaron detenidas y a oscuras.',
