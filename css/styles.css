@@ -365,6 +365,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .footer { padding: 34px 0; border-top: 1px solid var(--line); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: rgba(232, 220, 197, .45); }
 .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 30px; }
+.credits { margin-top: 22px; text-transform: none; letter-spacing: 0; font-size: 13px; line-height: 1.6; color: rgba(232, 220, 197, .6); }
+.credits summary { cursor: pointer; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); width: fit-content; }
+.credits p, .credits ul { margin-top: 12px; max-width: 980px; }
+.credits ul { padding-left: 18px; display: grid; gap: 8px; }
+.credits a { color: var(--paper); text-decoration-color: rgba(85, 214, 210, .5); text-underline-offset: 3px; }
 
 /* ==========================================================================
    CASE VIEW (03 · 04 · 05)
