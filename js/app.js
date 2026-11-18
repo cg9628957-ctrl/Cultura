@@ -242,29 +242,26 @@
   function buildHome() {
     $$('[data-scene]').forEach((el) => renderScene(el, el.dataset.scene, el.dataset.mode, { fit: 'slice', aberration: false }));
 
-    const wrap = $('#cases');
-    wrap.innerHTML = CASES.map((c) => `
-      <article class="case-card reveal" data-case="${c.n}">
-        <a class="case-link" href="${caseHash(c.n)}">
-          <div class="card-media frame-ai">
-            <div class="card-scene"></div>
-            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
-            <span class="card-code">${c.code} · ${c.coords}</span>
-            <span class="card-status" data-status="${c.n}">Sin explorar</span>
-            <span class="card-num">${pad(c.n)}</span>
-          </div>
-          <div class="card-body">
-            <p class="card-meta"><span>Caso ${pad(c.n)}</span><span>${c.shortCategory || c.category}</span></p>
-            <h3>${c.title}</h3>
-            <p>${c.desc}</p>
-            <span class="card-cta">Explorar recuerdo <i></i></span>
-          </div>
-        </a>
-      </article>`).join('');
-    $$('.case-card', wrap).forEach((card) => {
-      const c = CASES[+card.dataset.case - 1];
-      renderScene($('.card-scene', card), c.scene, 'ai', { fit: 'slice', aberration: false });
-    });
+    // Collage de recuerdos: posiciones de reposo en escritorio (x, y, w, r) y en móvil (mx, my, mw)
+    const LAYOUT = [
+      { x: '27%', y: '20%', w: '31%', r: '-4deg', mx: '2%', my: '3%', mw: '70%', z: 6 },
+      { x: '50%', y: '4%', w: '29%', r: '3deg', mx: '28%', my: '20%', mw: '70%', z: 5 },
+      { x: '62%', y: '44%', w: '29%', r: '6deg', mx: '6%', my: '38%', mw: '68%', z: 7 }
+    ];
+    const memos = $('#memos');
+    memos.innerHTML = CASES.map((c, i) => {
+      const L = LAYOUT[i];
+      return `
+      <button class="memo" type="button" data-case="${c.n}" aria-label="Caso ${pad(c.n)}: ${c.title}"
+        style="--x:${L.x};--y:${L.y};--w:${L.w};--r:${L.r};--mx:${L.mx};--my:${L.my};--mw:${L.mw};--z:${L.z}">
+        <span class="memo-flag" data-status="${c.n}" hidden>Explorado</span>
+        <span class="memo-paper">
+          <img src="${S.IMAGES[c.scene].ai}" alt="" loading="lazy">
+          <span class="memo-cap mono"><span>${c.code} · ${c.shortCategory || c.category}</span><span>${c.coords.split(' · ')[0]}</span></span>
+        </span>
+      </button>`;
+    }).join('');
+    bindCollage();
 
     const sheet = $('#contact-sheet');
     sheet.innerHTML = CASES.map((c) => `
@@ -272,13 +269,53 @@
     $$('.sheet-img', sheet).forEach((el, i) => renderScene(el, CASES[i].scene, 'real', { fit: 'slice' }));
   }
 
+  /* Selección de recuerdos: la foto elegida pasa al frente y aparece la ficha */
+  let activeMemo = null;
+  function selectMemo(n) {
+    const stage = $('#stage');
+    const info = $('#info');
+    activeMemo = n;
+    $$('.memo', stage).forEach((m) => {
+      const on = +m.dataset.case === n;
+      m.classList.toggle('is-active', on);
+      m.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    stage.classList.toggle('has-active', n !== null);
+    if (n === null) {
+      info.classList.remove('show');
+      setTimeout(() => { if (activeMemo === null) info.hidden = true; }, 450);
+      return;
+    }
+    const c = CASES[n - 1];
+    $('#info-title').textContent = 'Caso ' + pad(c.n);
+    $('#info-name').textContent = c.title;
+    $('#info-desc').textContent = c.desc;
+    $('#info-cat').textContent = c.category + '.';
+    $('#info-meta').textContent = c.code + ' · ' + c.coords + (getDone().has(c.n) ? ' · explorado' : '');
+    $('#info-open').href = caseHash(c.n);
+    info.hidden = false;
+    requestAnimationFrame(() => requestAnimationFrame(() => info.classList.add('show')));
+  }
+
+  function bindCollage() {
+    const stage = $('#stage');
+    $$('.memo', stage).forEach((m) => m.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const n = +m.dataset.case;
+      if (activeMemo === n) { location.hash = caseHash(n); return; }
+      selectMemo(n);
+    }));
+    $('#info-close').addEventListener('click', (e) => { e.stopPropagation(); selectMemo(null); });
+    $('#info').addEventListener('click', (e) => e.stopPropagation());
+    stage.addEventListener('click', () => { if (activeMemo !== null) selectMemo(null); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && activeMemo !== null) selectMemo(null); });
+  }
+
   function updateProgress() {
     const done = getDone();
     $('#progress-count').textContent = done.size;
     $$('[data-status]').forEach((el) => {
-      const ok = done.has(+el.dataset.status);
-      el.textContent = ok ? 'Explorado ✓' : 'Sin explorar';
-      el.classList.toggle('done', ok);
+      el.hidden = !done.has(+el.dataset.status);
     });
     const rp = $('#reflection-progress');
     if (rp) {
