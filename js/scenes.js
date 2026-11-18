@@ -171,9 +171,9 @@
         <rect x="${f(x - r * .32)}" y="${f(hy + r * .7)}" width="${f(r * .64)}" height="${f(r * .8)}" fill="#a77b5c"/>
         <ellipse cx="${x}" cy="${hy}" rx="${f(r * .86)}" ry="${r}" fill="url(#${u}-skin)"/>`;
       if (kind === 'bun') {
-        s += `<path d="M${f(x - r * .92)} ${f(hy + r * .15)} C${f(x - r)} ${f(hy - r * 1.25)} ${f(x + r)} ${f(hy - r * 1.25)} ${f(x + r * .92)} ${f(hy + r * .15)} C${f(x + r * .6)} ${f(hy - r * .55)} ${f(x - r * .6)} ${f(hy - r * .55)} Z" fill="${hair}"/><circle cx="${x}" cy="${f(hy - r * 1.05)}" r="${f(r * .38)}" fill="${hair}"/>`;
+        s += `<path d="M${f(x - r * .92)} ${f(hy + r * .15)} C${f(x - r)} ${f(hy - r * 1.25)} ${f(x + r)} ${f(hy - r * 1.25)} ${f(x + r * .92)} ${f(hy + r * .15)} C${f(x + r * .6)} ${f(hy - r * .55)} ${f(x - r * .6)} ${f(hy - r * .55)} ${f(x - r * .92)} ${f(hy + r * .15)} Z" fill="${hair}"/><circle cx="${x}" cy="${f(hy - r * 1.05)}" r="${f(r * .38)}" fill="${hair}"/>`;
       } else {
-        s += `<path d="M${f(x - r * .9)} ${f(hy - r * .05)} C${f(x - r * .95)} ${f(hy - r * 1.15)} ${f(x + r * .95)} ${f(hy - r * 1.15)} ${f(x + r * .9)} ${f(hy - r * .05)} C${f(x + r * .5)} ${f(hy - r * .6)} ${f(x - r * .5)} ${f(hy - r * .6)} Z" fill="${hair}"/>`;
+        s += `<path d="M${f(x - r * .9)} ${f(hy - r * .05)} C${f(x - r * .95)} ${f(hy - r * 1.15)} ${f(x + r * .95)} ${f(hy - r * 1.15)} ${f(x + r * .9)} ${f(hy - r * .05)} C${f(x + r * .5)} ${f(hy - r * .6)} ${f(x - r * .5)} ${f(hy - r * .6)} ${f(x - r * .9)} ${f(hy - r * .05)} Z" fill="${hair}"/>`;
       }
       s += `
         <ellipse cx="${f(x - r * .3)}" cy="${f(hy + r * .02)}" rx="${f(r * .09)}" ry="${f(r * .06)}" fill="#3a2a22" opacity=".7"/>
