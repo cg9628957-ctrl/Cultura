@@ -5,30 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>¿Así lo recuerdas? · Archivo de memoria · Moscú 2050</title>
   <meta name="description" content="Una experiencia interactiva sobre memoria, inteligencia artificial y reconstrucción del pasado en el Moscú de 2050.">
-  <meta name="theme-color" content="#101A2B">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101A2B'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%2355D6D2' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23D69B72'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#121212">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121212'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23efe9dc' stroke-width='2.5'/%3E%3Ctext x='32' y='39' font-family='Georgia' font-style='italic' font-size='20' text-anchor='middle' fill='%23efe9dc'%3Em%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- ============ BARRA SUPERIOR ============ -->
+  <div class="meta-strip mono" aria-hidden="true">
+    <span>M_1</span><span>20501</span><span class="hide-sm">ARCHIVO MNEMOS · MOSCÚ</span><span class="meta-strip-r">T3 C0<br>A3 p.14–17</span>
+  </div>
   <header class="topbar" id="topbar">
-    <a class="brand" href="#inicio" aria-label="Inicio">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-name">MNEMOS</span>
-      <span class="brand-sub">Archivo de memoria · Moscú 2050</span>
-    </a>
     <nav class="topnav" aria-label="Secciones">
-      <a href="#inicio"><b>01</b><span>Inicio</span></a>
-      <a href="#recuerdos"><b>02</b><span>Recuerdos</span></a>
-      <a href="#reflexion"><b>06</b><span>Reflexión</span></a>
+      <a href="#inicio">Inicio</a>
+      <a href="#recuerdos">Recuerdos</a>
+      <a href="#reflexion" class="hide-sm">Reflexión</a>
     </nav>
-    <div class="sys-status" aria-live="polite">
-      <span class="led" aria-hidden="true"></span>
-      <span><b id="progress-count">0</b>/3 <span class="hide-sm">recuerdos explorados</span></span>
+    <a class="logo" href="#inicio" aria-label="Mnemos, inicio"><span>mnemos</span></a>
+    <div class="topbar-r">
+      <span class="sys-status" aria-live="polite"><span class="led" aria-hidden="true"></span><b id="progress-count">0</b>/3 <span class="hide-sm">explorados</span></span>
+      <a href="#reflexion" class="hide-sm">Acerca</a>
     </div>
   </header>
 
@@ -37,93 +36,170 @@
 
     <!-- SECCIÓN 01 · INTRODUCCIÓN -->
     <section id="inicio" class="hero">
-      <div class="hero-grid">
-        <div class="hero-text">
-          <p class="eyebrow reveal"><span class="led"></span> Registro 00 · Sistema de reconstrucción de memoria</p>
-          <h1 class="hero-title reveal">¿Así lo<br><em>recuerdas?</em></h1>
-          <div class="hero-copy reveal">
-            <p>Hay momentos que permanecen en nuestra memoria, incluso cuando el tiempo pasa. Algunos los recordamos con claridad; otros, apenas en pequeños detalles.</p>
-            <p class="hero-question">Pero ¿cómo se vería uno de esos recuerdos si pudiéramos volver a él?</p>
-          </div>
-          <div class="hero-actions reveal">
-            <a class="btn btn-solid" href="#recuerdos"><span class="btn-dot"></span>Explorar recuerdos</a>
-            <span class="hero-hint">3 recuerdos · 9 diferencias por descubrir</span>
-          </div>
+      <div class="wrap">
+        <p class="crumbs reveal">Archivo Mnemos <i>/</i> Moscú 2050 <i>/</i> Registro 00</p>
+        <div class="page-head reveal">
+          <h1 class="display">¿Así lo recuerdas?</h1>
+          <aside class="side-meta">
+            <div class="view-icons" aria-hidden="true"><i class="on"></i><i></i></div>
+            <p class="mono">Recuerdos sin verificar.<br>Reconstruidos con frecuencia,<br>rara vez contados completos.</p>
+            <p class="mono">18 nov 2050</p>
+          </aside>
         </div>
+      </div>
 
-        <div class="hero-visual reveal" aria-hidden="true">
-          <div class="photo photo-back">
-            <div class="photo-img memory" data-scene="street" data-mode="real"></div>
+      <div class="folder reveal">
+        <div class="folder-inner">
+          <article class="sheet hero-sheet">
+            <span class="holes" aria-hidden="true"></span>
+            <span class="file-tag mono">Expediente Nº00</span>
+            <p class="sheet-note mono">Sin fecha. Origen: testimonios orales. Posible correlación con los expedientes 01–03, aunque sigue siendo especulativa.</p>
+            <div class="sheet-body">
+              <h2 class="sheet-title">Sin verificar</h2>
+              <p class="hero-copy">Hay momentos que permanecen en nuestra memoria, incluso cuando el tiempo pasa. Algunos los recordamos con claridad; otros, apenas en pequeños detalles.</p>
+              <div class="hero-actions">
+                <a class="btn btn-solid" href="#recuerdos"><span class="btn-ico" aria-hidden="true"></span>Explorar recuerdos</a>
+                <span class="mono hint">3 recuerdos · 9 diferencias</span>
+              </div>
+            </div>
+            <span class="sheet-code mono" aria-hidden="true">00</span>
+          </article>
+
+          <div class="excerpt">
+            <p class="excerpt-title">Fragmento A</p>
+            <p class="hero-question">Pero ¿cómo se vería uno de esos recuerdos si pudiéramos volver a él?</p>
+            <div class="excerpt-foot mono"><span>M_1</span><span>20501</span><span>01</span></div>
           </div>
-          <figure class="photo photo-main">
+
+          <figure class="photo-main" aria-hidden="true">
+            <span class="clip"></span>
             <div class="photo-window">
               <div class="photo-img memory" data-scene="dinner" data-mode="real"></div>
               <div class="photo-ai" data-scene="dinner" data-mode="ai"></div>
               <div class="photo-scan"></div>
-              <span class="tile" style="left:68%;top:14%"></span>
-              <span class="tile" style="left:80%;top:52%"></span>
-              <span class="tile" style="left:89%;top:24%"></span>
-              <span class="tile tile-sm" style="left:74%;top:78%"></span>
             </div>
-            <figcaption><span>REG. 0347 · Cena familiar</span><span>reconstrucción parcial · 71 %</span></figcaption>
+            <figcaption class="mono"><span>REG. 0347 · cena familiar</span><span>reconstrucción 71 %</span></figcaption>
           </figure>
-          <span class="tag tag-1"><i></i>Fragmento 0347<br><small>confianza 0,71</small></span>
-          <span class="tag tag-2">55.7558° N · 37.6173° E</span>
-          <span class="tag tag-3"><i class="terra"></i>Testimonio<br><small>fuente humana</small></span>
+
+          <div class="receipt" aria-hidden="true">
+            <p class="receipt-head mono">RECIBO</p>
+            <div class="receipt-grid mono">
+              <span>PARA:</span><span>FECHA:</span>
+              <b>Sistema MNEMOS</b><b>18 nov 2050</b>
+            </div>
+            <p class="mono receipt-line">Testimonio oral · Sector 7, Moscú</p>
+            <div class="receipt-sign"><span>firma</span></div>
+          </div>
+
+          <span class="stamp-round" aria-hidden="true">mnemos<small>archivo · 2050</small></span>
+
+          <div class="tabs" aria-hidden="true">
+            <span class="tab tab-red">Archivo Mnemos</span>
+            <span class="tab tab-blue">Moscú 2050</span>
+          </div>
         </div>
-      </div>
-      <div class="hero-foot">
-        <span>ARCHIVO MNEMOS / MSK-2050</span>
-        <span class="scroll-cue">Desliza para comenzar <i></i></span>
-        <span class="hide-sm">Nodo 07 · Zamoskvorechye</span>
       </div>
     </section>
 
     <!-- SECCIÓN 02 · EXPLORACIÓN -->
     <section id="recuerdos" class="explore">
       <div class="wrap">
-        <header class="section-head reveal">
-          <span class="section-num">02</span>
-          <div>
-            <p class="eyebrow">Exploración de recuerdos</p>
-            <h2 class="section-title">Tres recuerdos, tres reconstrucciones</h2>
+        <p class="crumbs reveal">Archivo <i>/</i> Moscú 2050 <i>/</i> Recuerdos <i>/</i> Reconstrucciones</p>
+        <div class="page-head reveal">
+          <h2 class="display display-2">Tres recuerdos, tres reconstrucciones</h2>
+          <aside class="side-meta">
+            <div class="view-icons" aria-hidden="true"><i class="on"></i><i></i></div>
+            <p class="mono">Ensamblaje de archivo</p>
+            <p class="mono">3 expedientes</p>
+          </aside>
+        </div>
+        <div class="two-cols mono reveal">
+          <p>Cada imagen representa un momento del pasado reconstruido por inteligencia artificial a partir del recuerdo de una persona. Explora los casos y descubre qué tan fiel puede ser esa reconstrucción.</p>
+          <p>Selecciona una fotografía para traerla al frente. Cada expediente contiene el testimonio de quien lo vivió, la imagen generada por la IA y tres diferencias por descubrir. Los casos pueden explorarse en cualquier orden.</p>
+        </div>
+
+        <div class="stage reveal" id="stage">
+          <!-- documentos decorativos -->
+          <div class="doc doc-folder" aria-hidden="true">
+            <p class="mono">ARCHIVO<br>MNEMOS</p>
+            <p class="mono small">Elías V.<br>12 nov 2049</p>
+            <p class="mono small">T3<br>C0<br>A3<br>p.14–17</p>
+            <span class="seal">MNEMOS · MOSCÚ · 2050 ·</span>
           </div>
-          <p class="section-lead">Cada imagen representa un momento del pasado reconstruido por inteligencia artificial a partir del recuerdo de una persona. Explora los casos y descubre qué tan fiel puede ser esa reconstrucción.</p>
-        </header>
-        <div class="cases" id="cases"></div>
+          <div class="doc doc-card" aria-hidden="true">
+            <p class="card-head">14 días de consulta</p>
+            <p class="card-sub mono">Devolver al archivo antes de la fecha indicada</p>
+            <ul class="mono"><li><b>20 JUL</b> recib.</li><li><s>04 AGO</s></li><li><b>11 SEP</b> recib.</li></ul>
+          </div>
+          <div class="doc doc-chart" aria-hidden="true">
+            <p class="mono">REGISTRO DE SEÑAL · MEMORIA</p>
+            <svg viewBox="0 0 200 110" preserveAspectRatio="none"><polyline fill="none" stroke="#2a2a2a" stroke-width="1.2" points="0,96 14,94 22,90 28,40 33,92 46,93 58,88 63,22 68,90 82,92 96,86 102,52 107,90 120,92 134,89 139,12 144,91 160,92 172,80 178,60 183,90 200,92"/><line x1="0" y1="100" x2="200" y2="100" stroke="#999" stroke-width=".6"/></svg>
+            <p class="mono small">FIG. 208</p>
+          </div>
+
+          <!-- fotografías (las genera app.js) -->
+          <div id="memos"></div>
+
+          <!-- tarjeta de información -->
+          <aside class="info" id="info" aria-live="polite" hidden>
+            <div class="info-card">
+              <p class="info-title" id="info-title">Caso 01</p>
+              <p class="info-name" id="info-name"></p>
+              <p class="mono info-desc" id="info-desc"></p>
+              <p class="mono info-cat" id="info-cat"></p>
+              <p class="mono info-meta" id="info-meta"></p>
+            </div>
+            <div class="info-actions">
+              <a class="btn btn-solid" id="info-open" href="#caso-01"><span class="btn-ico" aria-hidden="true"></span>Ver recuerdo</a>
+              <button class="btn-close" id="info-close" type="button" aria-label="Cerrar">×</button>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
 
     <!-- SECCIÓN 06 · REFLEXIÓN FINAL -->
-    <section id="reflexion" class="reflection paper-bg">
-      <div class="wrap narrow">
-        <p class="eyebrow eyebrow-ink reveal">06 · Reflexión final</p>
-        <h2 class="reflection-title reveal">¿Quién tiene la última palabra sobre nuestros recuerdos?</h2>
-        <div class="rule reveal"><span></span><i></i><span></span></div>
-        <div class="reflection-text reveal">
-          <p>Durante esta experiencia descubriste cómo una inteligencia artificial puede reconstruir momentos del pasado, pero también modificar detalles, inventar elementos u omitir aspectos importantes.</p>
-          <p>Una reconstrucción no siempre representa todo lo que ocurrió ni lo que significó para quien lo vivió.</p>
-          <p>Por eso, las personas no deberían ser simples fuentes de información para una inteligencia artificial. Deben tener voz y voto en la manera en que se cuentan sus historias, pudiendo corregirlas, complementarlas y decidir cómo quieren ser representadas.</p>
+    <section id="reflexion" class="reflection">
+      <div class="wrap">
+        <p class="crumbs reveal">Archivo <i>/</i> Moscú 2050 <i>/</i> Reflexión final</p>
+        <div class="page-head reveal">
+          <h2 class="display display-2 reflection-title">¿Quién tiene la última palabra sobre nuestros recuerdos?</h2>
+          <aside class="side-meta">
+            <div class="view-icons" aria-hidden="true"><i class="on"></i><i></i></div>
+            <p class="mono">Nota de cierre</p>
+            <p class="mono" id="reflection-progress"></p>
+          </aside>
         </div>
       </div>
-      <div class="contact-sheet reveal" id="contact-sheet" aria-hidden="true"></div>
-      <div class="wrap narrow">
+      <div class="wrap reflection-body">
+        <article class="sheet reflection-sheet reveal">
+          <span class="holes" aria-hidden="true"></span>
+          <span class="file-tag mono">Expediente Nº06</span>
+          <div class="reflection-text">
+            <p>Durante esta experiencia descubriste cómo una inteligencia artificial puede reconstruir momentos del pasado, pero también modificar detalles, inventar elementos u omitir aspectos importantes.</p>
+            <p class="lead">Una reconstrucción no siempre representa todo lo que ocurrió ni lo que significó para quien lo vivió.</p>
+            <p>Por eso, las personas no deberían ser simples fuentes de información para una inteligencia artificial. Deben tener voz y voto en la manera en que se cuentan sus historias, pudiendo corregirlas, complementarlas y decidir cómo quieren ser representadas.</p>
+          </div>
+          <span class="sheet-code mono" aria-hidden="true">06</span>
+        </article>
+        <div class="contact-sheet reveal" id="contact-sheet" aria-hidden="true"></div>
         <blockquote class="final-quote reveal">
-          <span class="q-mark" aria-hidden="true">“</span>
-          Una imagen puede reconstruir un recuerdo, pero solo quien lo vivió puede contar lo que realmente significó.
+          <p class="excerpt-title">Lo que realmente significó</p>
+          <p>Una imagen puede reconstruir un recuerdo, pero solo quien lo vivió puede contar lo que realmente significó.</p>
+          <div class="excerpt-foot mono"><span>M_6</span><span>20501</span><span>06</span></div>
         </blockquote>
         <div class="reflection-actions reveal">
-          <a class="btn btn-ink" href="#recuerdos"><span class="btn-dot"></span>Volver a explorar los recuerdos</a>
-          <p class="reflection-progress" id="reflection-progress"></p>
+          <a class="btn btn-solid" href="#recuerdos"><span class="btn-ico" aria-hidden="true"></span>Volver a explorar los recuerdos</a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="wrap footer-grid">
-        <span>¿Así lo recuerdas? · Proyecto Cultura</span>
-        <span>Moscú 2050 · Archivo ficticio de memoria</span>
-        <span>Fotografías reales de Wikimedia Commons · versiones «IA» creadas por fotomontaje</span>
+        <span class="mono">¿Así lo recuerdas? · Proyecto Cultura</span>
+        <span class="mono">Moscú 2050 · Archivo ficticio de memoria</span>
+        <span class="mono">Fotografías reales de Wikimedia Commons · versiones «IA» creadas por fotomontaje</span>
+        <a class="logo logo-sm" href="#inicio" aria-label="Volver al inicio"><span>mnemos</span></a>
       </div>
       <details class="wrap credits">
         <summary>Créditos de las fotografías</summary>
@@ -141,8 +217,7 @@
   <!-- ============ VISTA DE CASO (secciones 03 · 04 · 05) ============ -->
   <div id="case" class="view case-view" hidden>
     <div class="case-bar">
-      <a class="back" href="#recuerdos"><span aria-hidden="true">←</span> <span class="hide-sm">Volver a los</span> recuerdos</a>
-      <div class="case-id"><span class="code" id="case-code">EXP-01</span><span id="case-bar-title"></span></div>
+      <p class="crumbs"><a class="back" href="#recuerdos">← Recuerdos</a> <i>/</i> <span class="code" id="case-code">EXP-01</span> <i>/</i> <span id="case-bar-title"></span></p>
       <ol class="stepper" id="stepper">
         <li data-step="1"><button type="button"><b>03</b><span>Testimonio</span></button></li>
         <li data-step="2"><button type="button"><b>04</b><span>¿Qué entendió la IA?</span></button></li>
@@ -153,40 +228,49 @@
     <!-- SECCIÓN 03 · RECONSTRUCCIÓN DE LA IA -->
     <section class="step step-testimony" data-step="1">
       <div class="wrap testimony-grid">
-        <article class="paper testimony">
-          <header class="paper-meta">
-            <span id="t-code">TESTIMONIO 01-A</span>
-            <span id="t-coords"></span>
-          </header>
-          <p class="t-case" id="t-case">Caso 01</p>
-          <h1 class="t-title" id="t-title"></h1>
-          <p class="t-category" id="t-category"></p>
-          <blockquote class="t-quote" id="t-quote"></blockquote>
-          <footer class="paper-foot">
-            <span>Registro oral transcrito · fuente humana</span>
-            <span class="stamp">Original</span>
-          </footer>
-        </article>
+        <div class="folder folder-case">
+          <article class="sheet testimony">
+            <span class="holes" aria-hidden="true"></span>
+            <header class="paper-meta mono">
+              <span id="t-code">TESTIMONIO 01-A</span>
+              <span id="t-coords"></span>
+            </header>
+            <p class="t-case mono" id="t-case">Caso 01</p>
+            <h1 class="t-title" id="t-title"></h1>
+            <p class="t-category mono" id="t-category"></p>
+            <blockquote class="t-quote" id="t-quote"></blockquote>
+            <footer class="paper-foot mono">
+              <span>Registro oral transcrito · fuente humana</span>
+              <span class="stamp">Original</span>
+            </footer>
+          </article>
+          <div class="tabs" aria-hidden="true">
+            <span class="tab tab-red">Testimonio</span>
+            <span class="tab tab-blue">Fuente humana</span>
+          </div>
+        </div>
 
         <div class="recon">
-          <p class="eyebrow"><span class="led"></span> 03 · Reconstrucción de la IA</p>
-          <div class="recon-frame frame-ai" id="recon-frame">
-            <div class="recon-placeholder" id="recon-placeholder">
-              <span class="ph-grid"></span>
-              <p>El sistema ha recibido el testimonio.<br><small>La escena aún no ha sido reconstruida.</small></p>
-            </div>
-            <div class="recon-status" id="recon-status" hidden>
-              <span id="recon-phase">Analizando testimonio</span>
-              <b id="recon-pct">0 %</b>
+          <p class="crumbs">03 <i>/</i> Reconstrucción de la IA</p>
+          <div class="print">
+            <div class="recon-frame frame-ai" id="recon-frame">
+              <div class="recon-placeholder" id="recon-placeholder">
+                <span class="ph-grid"></span>
+                <p class="mono">El sistema ha recibido el testimonio.<br><small>La escena aún no ha sido reconstruida.</small></p>
+              </div>
+              <div class="recon-status mono" id="recon-status" hidden>
+                <span id="recon-phase">Analizando testimonio</span>
+                <b id="recon-pct">0 %</b>
+              </div>
             </div>
           </div>
-          <div class="recon-meta" id="recon-meta">
+          <div class="recon-meta mono" id="recon-meta">
             <span>Modelo MNEMOS-7 · síntesis visual</span>
             <span id="recon-fidelity">Esperando instrucciones</span>
           </div>
           <div class="recon-actions">
-            <button class="btn btn-solid" id="btn-reconstruct" type="button"><span class="btn-dot"></span>Ver la reconstrucción de la IA</button>
-            <button class="btn btn-solid" id="btn-find" type="button" hidden><span class="btn-dot"></span>Buscar diferencias</button>
+            <button class="btn btn-solid" id="btn-reconstruct" type="button"><span class="btn-ico" aria-hidden="true"></span>Ver la reconstrucción de la IA</button>
+            <button class="btn btn-solid" id="btn-find" type="button" hidden><span class="btn-ico" aria-hidden="true"></span>Buscar diferencias</button>
           </div>
         </div>
       </div>
@@ -195,25 +279,27 @@
     <!-- SECCIÓN 04 · ¿QUÉ ENTENDIÓ LA IA? -->
     <section class="step step-find" data-step="2" hidden>
       <div class="wrap">
-        <header class="find-head">
+        <p class="crumbs">04 <i>/</i> ¿Qué entendió la IA?</p>
+        <header class="page-head find-head">
           <div>
-            <p class="eyebrow"><span class="led"></span> 04 · ¿Qué entendió la IA?</p>
-            <h2 class="find-title">¿Notas algo extraño?</h2>
-            <p class="find-instr">Explora la imagen y selecciona los detalles que te llamen la atención.</p>
+            <h2 class="display display-2 find-title">¿Notas algo extraño?</h2>
+            <p class="find-instr mono">Explora la imagen y selecciona los detalles que te llamen la atención.</p>
           </div>
           <div class="counter" id="counter" aria-live="polite">
+            <span class="counter-label mono">Diferencias</span>
             <span class="counter-num"><b id="count">0</b>/3</span>
             <span class="counter-dots"><i></i><i></i><i></i></span>
-            <span class="counter-label">diferencias</span>
           </div>
         </header>
-        <div class="game-frame frame-ai" id="game-frame"></div>
+        <div class="print print-lg">
+          <div class="game-frame frame-ai" id="game-frame"></div>
+        </div>
         <ul class="found-list" id="found-list" aria-live="polite"></ul>
         <div class="complete" id="complete" hidden>
           <div class="complete-rings" aria-hidden="true"><i></i><i></i><i></i></div>
           <h3>¡Has encontrado todas las diferencias!</h3>
           <p>¿Te gustaría descubrir cómo era realmente este recuerdo para la persona que lo vivió?</p>
-          <button class="btn btn-solid" id="btn-reveal" type="button"><span class="btn-dot"></span>Descubrir el recuerdo original</button>
+          <button class="btn btn-solid" id="btn-reveal" type="button"><span class="btn-ico" aria-hidden="true"></span>Descubrir el recuerdo original</button>
         </div>
       </div>
     </section>
@@ -221,18 +307,20 @@
     <!-- SECCIÓN 05 · LA VERSIÓN DE QUIEN LO VIVIÓ -->
     <section class="step step-original" data-step="3" hidden>
       <div class="wrap">
-        <header class="orig-head">
-          <p class="eyebrow eyebrow-terra"><span class="led led-terra"></span> 05 · La versión de quien lo vivió</p>
-          <h2 class="orig-title" id="orig-title"></h2>
-          <p class="orig-text" id="orig-text"></p>
+        <p class="crumbs">05 <i>/</i> La versión de quien lo vivió</p>
+        <header class="page-head orig-head">
+          <h2 class="display display-2 orig-title" id="orig-title"></h2>
         </header>
+        <p class="orig-text" id="orig-text"></p>
 
-        <div class="compare" id="compare" role="slider" tabindex="0" aria-label="Comparar reconstrucción y recuerdo original" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-          <div class="cmp-layer cmp-ai" id="cmp-ai"></div>
-          <div class="cmp-layer cmp-real memory" id="cmp-real"></div>
-          <div class="cmp-handle" aria-hidden="true"><span>⟷</span></div>
-          <span class="cmp-label cmp-label-ai">Reconstrucción IA</span>
-          <span class="cmp-label cmp-label-real">Recuerdo original</span>
+        <div class="print print-lg">
+          <div class="compare" id="compare" role="slider" tabindex="0" aria-label="Comparar reconstrucción y recuerdo original" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <div class="cmp-layer cmp-ai" id="cmp-ai"></div>
+            <div class="cmp-layer cmp-real memory" id="cmp-real"></div>
+            <div class="cmp-handle" aria-hidden="true"><span>⟷</span></div>
+            <span class="cmp-label cmp-label-ai mono">Reconstrucción IA</span>
+            <span class="cmp-label cmp-label-real mono">Recuerdo original</span>
+          </div>
         </div>
         <div class="cmp-controls" role="group" aria-label="Vista">
           <button type="button" data-pos="100">Reconstrucción IA</button>
@@ -245,15 +333,15 @@
         <nav class="case-next" aria-label="Continuar">
           <div class="mini-cases" id="mini-cases"></div>
           <div class="case-next-actions">
-            <a class="btn" id="btn-next" href="#caso-02"><span class="btn-dot"></span>Siguiente recuerdo</a>
-            <a class="btn btn-terra" href="#reflexion" id="btn-to-reflection"><span class="btn-dot"></span>Ir a la reflexión final</a>
+            <a class="btn btn-solid" id="btn-next" href="#caso-02"><span class="btn-ico" aria-hidden="true"></span>Siguiente recuerdo</a>
+            <a class="btn btn-ghost" href="#reflexion" id="btn-to-reflection"><span class="btn-ico" aria-hidden="true"></span>Ir a la reflexión final</a>
           </div>
         </nav>
       </div>
     </section>
   </div>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
 
   <script src="js/scenes.js"></script>
   <script src="js/app.js"></script>
