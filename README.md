@@ -8,10 +8,10 @@ El visitante explora tres recuerdos reconstruidos por una IA. En cada caso lee p
 
 | Sección | Contenido |
 | --- | --- |
-| 01 · Introducción | Pantalla de bienvenida con una fotografía en proceso de reconstrucción. |
-| 02 · Exploración | Tres casos que pueden abrirse en cualquier orden. |
-| 03 · Reconstrucción de la IA | Testimonio original en papel y generación de la imagen. |
-| 04 · ¿Qué entendió la IA? | Juego de diferencias: contador 1/3 · 2/3 · 3/3, contornos turquesa y mensaje final. |
+| 01 · Introducción | Portada animada: titular letra a letra, haz de luz, partículas y fragmentos de la ciudad que flotan. |
+| 02 · Exploración | Collage de tres fotografías sobre paneles holográficos; al elegir una pasa al frente con el botón «Ver recuerdo». Los casos se abren en cualquier orden. |
+| 03 · Reconstrucción de la IA | Testimonio escrito de quien lo vivió, que aparece en pantalla palabra a palabra, y generación de la imagen. |
+| 04 · ¿Qué entendió la IA? | Juego de diferencias: contador 1/3 · 2/3 · 3/3, contornos verde neón y mensaje final. |
 | 05 · La versión de quien lo vivió | Comparador deslizable reconstrucción / recuerdo y explicación de cada error. |
 | 06 · Reflexión final | Cierre pausado sobre quién tiene la última palabra sobre nuestros recuerdos. |
 
@@ -66,6 +66,7 @@ Los fotomontajes son obras derivadas con fines educativos; los que incorporan ma
 
 ## Diseño
 
-- Paleta: azul espacial `#101A2B`, azul tecnológico `#24374B`, turquesa luminoso `#55D6D2`, papel arena `#E8DCC5`, arena tostada `#C5AD89`, terracota suave `#D69B72`.
-- Tipografía: Cormorant Garamond (títulos) y Manrope (texto e interfaz).
-- El azul y el turquesa representan la reconstrucción de la IA; el papel arena y la terracota, la memoria humana.
+- Estética: cyber brutalismo ambientado en el Moscú de 2050, con paneles holográficos, cuadrícula y tipografía monoespaciada.
+- Paleta (basada en «Moscow 2050», 2050.earth): negro `#0E0F10`, grafito `#1A1A1A` / `#292A27`, acero `#5A5F63`, pizarra `#7B8799`, nube `#A5B0BC`, arenisca `#DED3BA`, verde neón `#00FFA7`, verde `#00CB71`.
+- Tipografía: JetBrains Mono (títulos), IBM Plex Mono (interfaz) y Manrope (textos largos).
+- El verde neón representa la reconstrucción de la IA; la arenisca, la memoria de quien lo vivió.
