@@ -186,7 +186,7 @@
   function drawMark(svg, diff, index, variant) {
     const glow = ensureGlow(svg);
     const g = svgEl('g', { class: 'mark' + (variant ? ' mark-' + variant : '') });
-    const color = variant === 'real' ? '#D69B72' : '#55D6D2';
+    const color = variant === 'real' ? '#DED3BA' : '#00FFA7';
     const P = 10;
     // En pantallas pequeñas la imagen se reduce mucho: engrosamos contornos y números
     const w = svg.getBoundingClientRect().width || 900;
@@ -205,7 +205,7 @@
     badge.appendChild(svgEl('circle', { cx: cx, cy: cy, r: R, fill: color }));
     const t = svgEl('text', {
       x: cx, y: cy + R * .35, 'text-anchor': 'middle', 'font-family': 'Manrope, sans-serif',
-      'font-weight': '700', 'font-size': (26 * k).toFixed(1), fill: '#101A2B'
+      'font-weight': '700', 'font-size': (26 * k).toFixed(1), fill: '#0E0F10'
     });
     t.textContent = String(index + 1);
     badge.appendChild(t);
@@ -355,7 +355,7 @@
     $('#t-case').textContent = 'Caso ' + pad(c.n);
     $('#t-title').textContent = c.title;
     $('#t-category').textContent = 'Categoría: ' + c.category + '.';
-    $('#t-quote').textContent = '«' + c.testimony + '»';
+    playTestimony(c.testimony);
 
     // Reiniciar el panel de reconstrucción
     const frame = $('#recon-frame');
@@ -376,6 +376,22 @@
     view.style.animation = 'none'; void view.offsetWidth; view.style.animation = '';
     goStep(1, true);
     document.title = c.title + ' · ¿Así lo recuerdas?';
+  }
+
+  /* Testimonio escrito: el texto de quien lo vivió aparece en pantalla
+     palabra a palabra, como un mensaje que se abre; al terminar queda fijo. */
+  let entryTimer = null;
+  function playTestimony(text) {
+    const q = $('#t-quote');
+    const entry = $('#entry');
+    const words = ('«' + text + '»').split(' ');
+    const step = reduceMotion ? 0 : 0.035;
+    q.setAttribute('aria-label', '«' + text + '»');
+    q.innerHTML = words.map((w, i) => `<span class="wd" aria-hidden="true" style="--i:${(i * step).toFixed(3)}s">${w}</span>`).join(' ');
+    clearTimeout(entryTimer);
+    entry.classList.remove('done');
+    entry.classList.add('writing');
+    entryTimer = setTimeout(() => { entry.classList.remove('writing'); entry.classList.add('done'); }, reduceMotion ? 0 : words.length * step * 1000 + 500);
   }
 
   function stepAllowed(n) {
@@ -648,6 +664,139 @@
     bindCompare();
   }
 
+  /* ---------------------------------------------------------------------
+     Portada animada: titular que aparece letra a letra, haz de luz,
+     partículas y fragmentos de memoria y de la ciudad que flotan.
+     --------------------------------------------------------------------- */
+  const ICONS = {
+    ventana: '<svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><path d="M12 3v18M4 12h16"/></svg>',
+    cabina: '<svg viewBox="0 0 24 24"><path d="M2 4l20 3M12 5.5V9"/><rect x="6" y="9" width="12" height="10" rx="3"/><path d="M8 12h8"/></svg>',
+    lampara: '<svg viewBox="0 0 24 24"><path d="M12 2v5M7 7h10l2 6H5z"/><path d="M10 16a2 2 0 0 0 4 0"/></svg>',
+    edificio: '<svg viewBox="0 0 24 24"><path d="M5 21V5l7-3v19M12 9h7v12M8 8h1M8 12h1M8 16h1M15 13h1M15 17h1M3 21h18"/></svg>',
+    camara: '<svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l2-3h4l2 3"/></svg>',
+    taza: '<svg viewBox="0 0 24 24"><path d="M5 9h11v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2M8 3v3M12 3v3"/></svg>',
+    llave: '<svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="4"/><path d="M11 11l9 9M16 16l2-2M18 18l2-2"/></svg>',
+    estrella: '<svg viewBox="0 0 24 24"><path d="M12 3l2.6 6 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3.2 1.4-6.3L3 9.6 9.4 9z"/></svg>'
+  };
+  const FLOATERS = [
+    { t: 'word', v: 'ПАМЯТЬ', x: 9, y: 30, fs: 26, o: .28, bl: 0, dz: 18 },
+    { t: 'word', v: 'МОСКВА', x: 76, y: 18, fs: 20, o: .22, bl: 1, dz: 12 },
+    { t: 'word', v: 'ДОМ', x: 84, y: 60, fs: 30, o: .2, bl: 2, dz: 24, pink: true },
+    { t: 'word', v: 'УЛИЦА', x: 15, y: 66, fs: 18, o: .22, bl: 1, dz: 10 },
+    { t: 'word', v: 'СВЕТ', x: 62, y: 80, fs: 22, o: .18, bl: 2, dz: 16 },
+    { t: 'word', v: 'ОКНО', x: 30, y: 12, fs: 16, o: .2, bl: 1, dz: 8 },
+    { t: 'icon', v: 'ventana', x: 22, y: 42, fs: 38, o: .32, bl: 0, dz: 22 },
+    { t: 'icon', v: 'cabina', x: 70, y: 36, fs: 44, o: .3, bl: 0, dz: 26 },
+    { t: 'icon', v: 'lampara', x: 88, y: 40, fs: 30, o: .26, bl: 1, dz: 14 },
+    { t: 'icon', v: 'edificio', x: 6, y: 52, fs: 36, o: .24, bl: 1, dz: 12 },
+    { t: 'icon', v: 'camara', x: 40, y: 84, fs: 30, o: .22, bl: 2, dz: 18 },
+    { t: 'icon', v: 'taza', x: 80, y: 74, fs: 28, o: .22, bl: 1, dz: 20 },
+    { t: 'icon', v: 'llave', x: 52, y: 10, fs: 24, o: .2, bl: 2, dz: 10 },
+    { t: 'icon', v: 'estrella', x: 92, y: 12, fs: 18, o: .3, bl: 0, dz: 8 },
+    { t: 'photo', v: 'img/caso1-real.jpg', x: 4, y: 14, fs: 120, o: .3, bl: 1, dz: 30, r: -8 },
+    { t: 'photo', v: 'img/caso2-real.jpg', x: 82, y: 82, fs: 110, o: .26, bl: 2, dz: 28, r: 7 },
+    { t: 'photo', v: 'img/caso3-real.jpg', x: 68, y: 6, fs: 96, o: .22, bl: 2, dz: 20, r: 4 },
+    { t: 'tag', v: 'FRAGMENTO 0347', x: 26, y: 76, o: .55, bl: 0, dz: 14 },
+    { t: 'tag', v: 'TESTIMONIO ESCRITO', x: 64, y: 54, o: .45, bl: 1, dz: 18 }
+  ];
+
+  function initHero() {
+    const hero = $('#inicio');
+    if (!hero) return;
+
+    // 1. Titular dividido en palabras y letras
+    const title = $('#hero-title');
+    const words = title.textContent.trim().split(/\s+/);
+    title.setAttribute('aria-label', title.textContent.trim());
+    let i = 0;
+    title.innerHTML = words.map((w, wi) => {
+      const chars = Array.from(w).map((ch) => `<span class="ch" style="--i:${i++}">${ch}</span>`).join('');
+      i += 2;
+      return `<span class="w${wi === words.length - 1 ? ' pink' : ''}" aria-hidden="true">${chars}</span>`;
+    }).join(' ');
+    setTimeout(() => title.classList.add('glow'), reduceMotion ? 0 : 2400);
+
+    // 2. Elementos flotantes
+    const fl = $('#hero-float');
+    fl.innerHTML = FLOATERS.map((f, k) => {
+      let inner;
+      if (f.t === 'word') inner = `<span class="fl-word${f.pink ? ' pink' : ''}">${f.v}</span>`;
+      else if (f.t === 'icon') inner = `<span class="fl-icon">${ICONS[f.v]}</span>`;
+      else if (f.t === 'photo') inner = `<span class="fl-photo"><img src="${f.v}" alt="" loading="lazy"></span>`;
+      else inner = `<span class="fl-tag">${f.v}</span>`;
+      const style = `--x:${f.x}%;--y:${f.y}%;--fs:${f.fs || 12}px;--o:${f.o};--bl:${f.bl}px;--dz:${(f.dz / 12).toFixed(2)};--rot:${f.r || (k % 2 ? 4 : -4)}deg;--fd:${(0.6 + (k % 7) * 0.22).toFixed(2)}s;--dur:${(6 + (k % 5) * 1.4).toFixed(1)}s`;
+      return `<span class="fl" style="${style}">${inner}</span>`;
+    }).join('');
+    if (!reduceMotion) {
+      hero.addEventListener('pointermove', (e) => {
+        const r = hero.getBoundingClientRect();
+        fl.style.setProperty('--px', (((e.clientX - r.left) / r.width) - .5) * -40);
+        fl.style.setProperty('--py', (((e.clientY - r.top) / r.height) - .5) * -30);
+      });
+      hero.addEventListener('pointerleave', () => { fl.style.setProperty('--px', 0); fl.style.setProperty('--py', 0); });
+    }
+
+    // 3. Porcentaje del HUD
+    const pct = $('#hud-pct');
+    if (pct) {
+      const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - t0) / 2600);
+        pct.textContent = Math.round(87 * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      reduceMotion ? (pct.textContent = 87) : requestAnimationFrame(tick);
+    }
+
+    // 4. Partículas de luz (polvo en el haz)
+    const cv = $('#hero-dust');
+    if (!cv || reduceMotion) return;
+    const ctx = cv.getContext('2d');
+    let W = 0, H = 0, dpr = 1, parts = [];
+    const resize = () => {
+      dpr = Math.min(2, window.devicePixelRatio || 1);
+      W = hero.clientWidth; H = hero.clientHeight;
+      cv.width = W * dpr; cv.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const n = Math.round(Math.min(110, W / 12));
+      parts = Array.from({ length: n }, () => spawn(true));
+    };
+    const spawn = (anyY) => {
+      const inBeam = Math.random() < .7;
+      const x = inBeam ? W / 2 + (Math.random() - .5) * W * .45 : Math.random() * W;
+      return { x, y: anyY ? Math.random() * H : H + 10, r: Math.random() * 1.6 + .3, vy: -(Math.random() * .35 + .08), vx: (Math.random() - .5) * .15, a: Math.random() * .6 + .2, tw: Math.random() * Math.PI * 2, pink: Math.random() < .45 };
+    };
+    let visible = true;
+    new IntersectionObserver((en) => { visible = en[0].isIntersecting; }).observe(hero);
+    const draw = () => {
+      if (visible) {
+        ctx.clearRect(0, 0, W, H);
+        for (const p of parts) {
+          p.x += p.vx; p.y += p.vy; p.tw += .04;
+          if (p.y < -10) Object.assign(p, spawn(false));
+          const a = p.a * (.55 + .45 * Math.sin(p.tw));
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.pink ? `rgba(0,255,167,${a})` : `rgba(237,239,242,${a})`;
+          ctx.shadowColor = p.pink ? 'rgba(0,255,167,.9)' : 'rgba(237,239,242,.8)'; ctx.shadowBlur = 6;
+          ctx.fill();
+        }
+      }
+      requestAnimationFrame(draw);
+    };
+    resize();
+    window.addEventListener('resize', resize);
+    requestAnimationFrame(draw);
+  }
+
+  function startClock() {
+    const el = $('#sys-clock');
+    if (!el) return;
+    const upd = () => { const d = new Date(); el.textContent = [d.getHours(), d.getMinutes(), d.getSeconds()].map((n) => String(n).padStart(2, '0')).join(':'); };
+    upd(); setInterval(upd, 1000);
+  }
+
+  initHero();
+  startClock();
   buildHome();
   bind();
   updateProgress();
