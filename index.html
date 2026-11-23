@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="es">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>¿Así lo recuerdas? · Archivo de memoria · Moscú 2050</title>
-  <meta name="description" content="Una experiencia interactiva sobre memoria, inteligencia artificial y reconstrucción del pasado en el Moscú de 2050.">
+  <title>Ты так это помнишь? · Архив памяти · Москва 2050</title>
+  <meta name="description" content="Интерактивный опыт о памяти, искусственном интеллекте и реконструкции прошлого в Москве 2050 года.">
   <meta name="theme-color" content="#0E0F10">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2300FFA7'/%3E%3Cpath d='M14 18h12v12H14zM38 18h12v12H38zM26 34h12v12H26z' fill='%230E0F10'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,21 +16,21 @@
 
   <!-- ============ BARRA SUPERIOR ============ -->
   <header class="topbar" id="topbar">
-    <a class="logo" href="#inicio" aria-label="Mnemos, inicio">
+    <a class="logo" href="#inicio" aria-label="Mnemos, главная">
       <span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span>
       <span class="logo-word">MNEMOS_</span>
     </a>
-    <nav class="topnav" aria-label="Secciones">
-      <a href="#inicio">Inicio</a><span aria-hidden="true">+</span>
-      <a href="#recuerdos">Recuerdos</a><span aria-hidden="true">+</span>
-      <a href="#reflexion">Reflexión</a>
+    <nav class="topnav" aria-label="Разделы">
+      <a href="#inicio">Главная</a><span aria-hidden="true">+</span>
+      <a href="#recuerdos">Воспоминания</a><span aria-hidden="true">+</span>
+      <a href="#reflexion">Размышление</a>
     </nav>
     <div class="sys-box mono" aria-live="polite">
       <span>SYS_2050</span>
       <span><b id="sys-clock">00:00:00</b></span>
-      <span><b id="progress-count">0</b>/3 EXPL.</span>
+      <span><b id="progress-count">0</b>/3 ИЗУЧ.</span>
     </div>
-    <a class="btn btn-solid top-cta" href="#recuerdos">Explorar <span class="arr" aria-hidden="true">↗</span></a>
+    <a class="btn btn-solid top-cta" href="#recuerdos">Исследовать <span class="arr" aria-hidden="true">↗</span></a>
   </header>
 
   <!-- ============ VISTA PRINCIPAL ============ -->
@@ -43,46 +43,46 @@
       <div class="hero-float" id="hero-float" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
 
-      <div class="hud hud-tl mono" aria-hidden="true">&gt;RECONSTRUYENDO…<br><b id="hud-pct">0</b>%</div>
+      <div class="hud hud-tl mono" aria-hidden="true">&gt;РЕКОНСТРУКЦИЯ…<br><b id="hud-pct">0</b>%</div>
       <div class="hud hud-tr mono" aria-hidden="true">X_55.7558<br>Y_37.6173<br>T_2050</div>
       <div class="hud hud-bl mono" aria-hidden="true">//SCN_00</div>
-      <div class="hud hud-br mono" aria-hidden="true">NODO 07 · ZAMOSKVORECHYE</div>
-      <div class="hero-side mono" aria-hidden="true">ARCHIVO DE MEMORIA <i></i> MOSCÚ 2050</div>
+      <div class="hud hud-br mono" aria-hidden="true">УЗЕЛ 07 · ЗАМОСКВОРЕЧЬЕ</div>
+      <div class="hero-side mono" aria-hidden="true">АРХИВ ПАМЯТИ <i></i> МОСКВА 2050</div>
       <span class="plus" style="left:8%;top:22%" aria-hidden="true"></span>
       <span class="plus" style="left:91%;top:30%" aria-hidden="true"></span>
       <span class="plus" style="left:14%;top:78%" aria-hidden="true"></span>
       <span class="plus" style="left:86%;top:82%" aria-hidden="true"></span>
 
       <div class="hero-center">
-        <h1 class="hero-title" id="hero-title">¿Así lo recuerdas?</h1>
+        <h1 class="hero-title" id="hero-title">Ты так это помнишь?</h1>
         <div class="hero-copy anim-up" style="--d:1.7s">
-          <p>Hay momentos que permanecen en nuestra memoria, incluso cuando el tiempo pasa. Algunos los recordamos con claridad; otros, apenas en pequeños detalles.</p>
-          <p class="hero-question">Pero ¿cómo se vería uno de esos recuerdos si pudiéramos volver a él?</p>
+          <p>Есть моменты, которые остаются в нашей памяти, даже когда проходит время. Одни мы помним ясно, другие — лишь по мелким деталям.</p>
+          <p class="hero-question">Но как выглядело бы одно из этих воспоминаний, если бы мы могли к нему вернуться?</p>
         </div>
         <div class="hero-actions anim-up" style="--d:2.1s">
-          <a class="btn btn-solid" href="#recuerdos">Explorar recuerdos <span class="arr" aria-hidden="true">↗</span></a>
-          <a class="btn btn-ghost" href="#reflexion">Ver manifiesto <span class="arr" aria-hidden="true">⌗</span></a>
+          <a class="btn btn-solid" href="#recuerdos">Исследовать воспоминания <span class="arr" aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="#reflexion">Смотреть манифест <span class="arr" aria-hidden="true">⌗</span></a>
         </div>
       </div>
-      <a class="scroll-cue mono" href="#recuerdos" aria-label="Bajar a los recuerdos">SCROLL <i></i></a>
+      <a class="scroll-cue mono" href="#recuerdos" aria-label="Перейти к воспоминаниям">ЛИСТАЙ <i></i></a>
     </section>
 
     <!-- SECCIÓN 02 · EXPLORACIÓN -->
     <section id="recuerdos" class="explore">
       <div class="wrap">
         <div class="sec-head reveal">
-          <h2 class="sec-title">Tres recuerdos, tres reconstrucciones</h2>
-          <aside class="sec-meta mono"><span>ENSAMBLAJE DE ARCHIVO</span><span>3 EXPEDIENTES</span></aside>
+          <h2 class="sec-title">Три воспоминания, три реконструкции</h2>
+          <aside class="sec-meta mono"><span>СБОРКА АРХИВА</span><span>3 ДОСЬЕ</span></aside>
         </div>
         <div class="two-cols mono reveal">
-          <p>Cada imagen representa un momento del pasado reconstruido por inteligencia artificial a partir del recuerdo de una persona. Explora los casos y descubre qué tan fiel puede ser esa reconstrucción.</p>
-          <p>Selecciona una fotografía para traerla al frente. Cada expediente contiene el testimonio de quien lo vivió, la imagen generada por la IA y tres diferencias por descubrir. Los casos pueden explorarse en cualquier orden.</p>
+          <p>Каждое изображение — это момент прошлого, воссозданный искусственным интеллектом по воспоминанию человека. Исследуй случаи и узнай, насколько точной может быть такая реконструкция.</p>
+          <p>Выбери фотографию, чтобы вывести её на первый план. В каждом досье — свидетельство того, кто это пережил, изображение, созданное ИИ, и три различия, которые нужно найти. Случаи можно изучать в любом порядке.</p>
         </div>
 
         <div class="stage reveal" id="stage">
           <!-- paneles holográficos de fondo -->
           <div class="doc hud-map" aria-hidden="true">
-            <p class="hud-label mono"><i></i>MAPA DE MEMORIA · MOSCÚ</p>
+            <p class="hud-label mono"><i></i>КАРТА ПАМЯТИ · МОСКВА</p>
             <div class="map-wrap">
               <svg viewBox="0 0 200 200">
                 <ellipse cx="100" cy="100" rx="92" ry="86" class="ring ring-mkad"/>
@@ -98,26 +98,26 @@
               </svg>
               <span class="sweep"></span>
             </div>
-            <p class="hud-foot mono">MKAD · ANILLO 3 · ANILLO DE JARDINES · KREMLIN</p>
+            <p class="hud-foot mono">МКАД · ТТК · САДОВОЕ КОЛЬЦО · КРЕМЛЬ</p>
           </div>
           <div class="doc hud-inbox" aria-hidden="true">
-            <p class="hud-label mono"><i></i>TESTIMONIOS ESCRITOS · RECIBIDOS</p>
+            <p class="hud-label mono"><i></i>ПИСЬМЕННЫЕ СВИДЕТЕЛЬСТВА · ПОЛУЧЕНО</p>
             <ul class="inbox mono">
-              <li><b>EXP-01</b><span>«Recuerdo las cenas en casa de mis abuelos…»</span><em>80 pal.</em></li>
-              <li><b>EXP-02</b><span>«Recuerdo las tardes en la calle donde crecí…»</span><em>90 pal.</em></li>
-              <li><b>EXP-03</b><span>«Recuerdo aquella noche en la que una falla…»</span><em>73 pal.</em></li>
+              <li><b>EXP-01</b><span>«Я помню ужины в доме бабушки и дедушки…»</span><em>72 сл.</em></li>
+              <li><b>EXP-02</b><span>«Я помню вечера на улице моего детства…»</span><em>78 сл.</em></li>
+              <li><b>EXP-03</b><span>«Я помню ту ночь, когда авария…»</span><em>57 сл.</em></li>
             </ul>
-            <p class="hud-foot mono"><span>3 TEXTOS · PRIMERA PERSONA</span><span>RECIBIDO<span class="caret"></span></span></p>
+            <p class="hud-foot mono"><span>3 ТЕКСТА · ОТ ПЕРВОГО ЛИЦА</span><span>ПОЛУЧЕНО<span class="caret"></span></span></p>
           </div>
           <div class="doc hud-log" aria-hidden="true">
-            <p class="hud-label mono"><i></i>REGISTRO DEL SISTEMA</p>
+            <p class="hud-label mono"><i></i>СИСТЕМНЫЙ ЖУРНАЛ</p>
             <ul class="mono">
-              <li><b>&gt;</b> cargando EXP-01 · cena familiar <em>ok</em></li>
-              <li><b>&gt;</b> cargando EXP-02 · calle, zona baja <em>ok</em></li>
-              <li><b>&gt;</b> cargando EXP-03 · apagón, sector 7 <em>ok</em></li>
-              <li><b>&gt;</b> fuente: testimonio escrito en primera persona</li>
-              <li><b>&gt;</b> fidelidad estimada: 96,4 %</li>
-              <li><b>&gt;</b> pendiente: verificación de quien lo vivió<span class="caret"></span></li>
+              <li><b>&gt;</b> загрузка EXP-01 · семейный ужин <em>ok</em></li>
+              <li><b>&gt;</b> загрузка EXP-02 · улица, нижние районы <em>ok</em></li>
+              <li><b>&gt;</b> загрузка EXP-03 · блэкаут, сектор 7 <em>ok</em></li>
+              <li><b>&gt;</b> источник: письменное свидетельство от первого лица</li>
+              <li><b>&gt;</b> оценка точности: 96,4 %</li>
+              <li><b>&gt;</b> ожидает: проверки тем, кто это пережил<span class="caret"></span></li>
             </ul>
           </div>
 
@@ -127,15 +127,15 @@
           <!-- tarjeta de información -->
           <aside class="info" id="info" aria-live="polite" hidden>
             <div class="info-card">
-              <p class="info-title" id="info-title">Caso 01</p>
+              <p class="info-title" id="info-title">Случай 01</p>
               <p class="info-name" id="info-name"></p>
               <p class="mono info-desc" id="info-desc"></p>
               <p class="mono info-cat" id="info-cat"></p>
               <p class="mono info-meta" id="info-meta"></p>
             </div>
             <div class="info-actions">
-              <a class="btn btn-solid" id="info-open" href="#caso-01"><span class="btn-ico" aria-hidden="true"></span>Ver recuerdo</a>
-              <button class="btn-close" id="info-close" type="button" aria-label="Cerrar">×</button>
+              <a class="btn btn-solid" id="info-open" href="#caso-01"><span class="btn-ico" aria-hidden="true"></span>Смотреть воспоминание</a>
+              <button class="btn-close" id="info-close" type="button" aria-label="Закрыть">×</button>
             </div>
           </aside>
         </div>
@@ -146,30 +146,30 @@
     <section id="reflexion" class="reflection">
       <div class="wrap">
         <div class="sec-head reveal">
-          <h2 class="sec-title reflection-title">¿Quién tiene la última palabra sobre nuestros recuerdos?</h2>
-          <aside class="sec-meta mono"><span>NOTA DE CIERRE</span><span id="reflection-progress"></span></aside>
+          <h2 class="sec-title reflection-title">Кому принадлежит последнее слово о наших воспоминаниях?</h2>
+          <aside class="sec-meta mono"><span>ЗАКЛЮЧИТЕЛЬНАЯ ЗАМЕТКА</span><span id="reflection-progress"></span></aside>
         </div>
         <div class="reflection-grid">
           <article class="reflection-text reveal">
-            <p>Durante esta experiencia descubriste cómo una inteligencia artificial puede reconstruir momentos del pasado, pero también modificar detalles, inventar elementos u omitir aspectos importantes.</p>
-            <p class="lead">Una reconstrucción no siempre representa todo lo que ocurrió ni lo que significó para quien lo vivió.</p>
-            <p>Por eso, las personas no deberían ser simples fuentes de información para una inteligencia artificial. Deben tener voz y voto en la manera en que se cuentan sus historias, pudiendo corregirlas, complementarlas y decidir cómo quieren ser representadas.</p>
+            <p>Этот опыт показал, как искусственный интеллект может воссоздавать моменты прошлого, но также изменять детали, придумывать элементы или упускать важные стороны.</p>
+            <p class="lead">Реконструкция не всегда передаёт всё, что произошло, и то, что это значило для того, кто это пережил.</p>
+            <p>Поэтому люди не должны быть просто источниками информации для искусственного интеллекта. У них должно быть право голоса в том, как рассказываются их истории: возможность исправлять и дополнять их и решать, какими они хотят быть представлены.</p>
           </article>
-          <aside class="status reveal" aria-label="Estado de la memoria">
-            <p class="status-title mono">/ESTADO DE LA MEMORIA</p>
-            <div class="status-row mono"><span>RECONSTRUCCIONES</span><i style="--v:100%"></i><b>3/3</b></div>
-            <div class="status-row mono"><span>DETALLES ALTERADOS</span><i style="--v:100%"></i><b>9</b></div>
-            <div class="status-row mono"><span>VERIFICADO POR IA</span><i style="--v:0%"></i><b>0</b></div>
-            <div class="status-row mono"><span>CONTADO POR QUIEN LO VIVIÓ</span><i style="--v:100%"></i><b>SÍ</b></div>
-            <p class="status-ok mono">LA ÚLTIMA PALABRA: QUIEN LO VIVIÓ</p>
+          <aside class="status reveal" aria-label="Состояние памяти">
+            <p class="status-title mono">/СОСТОЯНИЕ ПАМЯТИ</p>
+            <div class="status-row mono"><span>РЕКОНСТРУКЦИИ</span><i style="--v:100%"></i><b>3/3</b></div>
+            <div class="status-row mono"><span>ИЗМЕНЁННЫЕ ДЕТАЛИ</span><i style="--v:100%"></i><b>9</b></div>
+            <div class="status-row mono"><span>ПРОВЕРЕНО ИИ</span><i style="--v:0%"></i><b>0</b></div>
+            <div class="status-row mono"><span>РАССКАЗАНО ОЧЕВИДЦЕМ</span><i style="--v:100%"></i><b>ДА</b></div>
+            <p class="status-ok mono">ПОСЛЕДНЕЕ СЛОВО — ЗА ТЕМ, КТО ЭТО ПЕРЕЖИЛ</p>
           </aside>
         </div>
         <div class="contact-sheet reveal" id="contact-sheet" aria-hidden="true"></div>
         <blockquote class="final-quote reveal">
-          <p>Una imagen puede reconstruir un recuerdo, pero solo quien lo vivió puede contar lo que realmente significó.</p>
+          <p>Изображение может воссоздать воспоминание, но только тот, кто его пережил, может рассказать, что оно на самом деле значило.</p>
         </blockquote>
         <div class="reflection-actions reveal">
-          <a class="btn btn-solid" href="#recuerdos">Volver a explorar los recuerdos <span class="arr" aria-hidden="true">↗</span></a>
+          <a class="btn btn-solid" href="#recuerdos">Вернуться к воспоминаниям <span class="arr" aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -177,44 +177,44 @@
     <footer class="footer">
       <div class="wrap footer-grid">
         <div>
-          <a class="logo" href="#inicio" aria-label="Volver al inicio"><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="logo-word">MNEMOS_</span></a>
-          <p class="mono small-txt">¿Así lo recuerdas? · Proyecto Cultura<br>Moscú 2050 · Archivo ficticio de memoria</p>
+          <a class="logo" href="#inicio" aria-label="Вернуться на главную"><span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="logo-word">MNEMOS_</span></a>
+          <p class="mono small-txt">Ты так это помнишь? · Проект «Культура»<br>Москва 2050 · Вымышленный архив памяти</p>
         </div>
         <div class="mono">
-          <p class="f-head">NAVEGACIÓN</p>
-          <a href="#inicio">Inicio</a><a href="#recuerdos">Recuerdos</a><a href="#reflexion">Reflexión</a>
+          <p class="f-head">НАВИГАЦИЯ</p>
+          <a href="#inicio">Главная</a><a href="#recuerdos">Воспоминания</a><a href="#reflexion">Размышление</a>
         </div>
         <div class="mono">
-          <p class="f-head">EXPEDIENTES</p>
-          <a href="#caso-01">01 · La mesa</a><a href="#caso-02">02 · La calle</a><a href="#caso-03">03 · La noche</a>
+          <p class="f-head">ДОСЬЕ</p>
+          <a href="#caso-01">01 · Стол</a><a href="#caso-02">02 · Улица</a><a href="#caso-03">03 · Ночь</a>
         </div>
         <div class="mono">
-          <p class="f-head">IMÁGENES</p>
-          <p class="small-txt">Fotografías reales de Wikimedia Commons · versiones «IA» creadas por fotomontaje</p>
+          <p class="f-head">ИЗОБРАЖЕНИЯ</p>
+          <p class="small-txt">Реальные фотографии с Викисклада · версии «ИИ» созданы фотомонтажом</p>
         </div>
       </div>
       <details class="wrap credits">
-        <summary>Créditos de las fotografías</summary>
-        <p>Las imágenes «originales» son fotografías reales; en el caso 03, la foto nocturna fue oscurecida para representar el apagón. Las «reconstrucciones de la IA» son fotomontajes hechos con fines educativos a partir de esas fotografías. Las versiones derivadas de obras CC BY-SA se comparten bajo CC BY-SA 4.0.</p>
+        <summary>Авторы фотографий</summary>
+        <p>«Оригинальные» изображения — реальные фотографии; в случае 03 ночной снимок затемнён, чтобы показать блэкаут. «Реконструкции ИИ» — фотомонтажи, сделанные на основе этих фотографий в образовательных целях. Производные от работ под CC BY-SA распространяются под CC BY-SA 4.0.</p>
         <ul>
-          <li>Caso 01 · <a href="https://commons.wikimedia.org/wiki/File:%D0%A1%D0%A1%D0%A1%D0%A0,_1973,_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2-%D0%BD%D0%B0-%D0%94%D0%BE%D0%BD%D1%83,_%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BE%D1%8E%D0%B7,_%D0%A1%D0%B5%D0%BC%D0%B5%D0%B9%D0%BD%D1%8B%D0%B9_%D0%BF%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D1%83%D0%B6%D0%B8%D0%BD,_Soviet_Union.jpg" target="_blank" rel="noopener">«Семейный праздничный ужин», URSS, 1973</a> y <a href="https://commons.wikimedia.org/wiki/File:%D0%A1%D0%A1%D0%A1%D0%A0,_1973,_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2-%D0%BD%D0%B0-%D0%94%D0%BE%D0%BD%D1%83,_%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BE%D1%8E%D0%B7,_%D0%A1%D0%B5%D0%BC%D0%B5%D0%B9%D0%BD%D1%8B%D0%B9_%D1%83%D0%B6%D0%B8%D0%BD,_Soviet_Union.jpg" target="_blank" rel="noopener">«Семейный ужин»</a> — Vyacheslav Argenberg, CC BY 4.0 (tomadas en Rostov del Don). <a href="https://commons.wikimedia.org/wiki/File:Bouquet_de_fleurs_dans_un_vase_-_btv1b530787820.jpg" target="_blank" rel="noopener">Ramo de flores</a> — Agence Rol, dominio público. <a href="https://commons.wikimedia.org/wiki/File:Kerze_2007k.JPG" target="_blank" rel="noopener">Vela</a> — Duftkerze, dominio público. <a href="https://commons.wikimedia.org/wiki/File:Shishkin,_Ivan_-_Morning_in_a_Pine_Forest.jpg" target="_blank" rel="noopener">«Mañana en un bosque de pinos»</a> — Iván Shishkin y Konstantín Savitski, dominio público.</li>
-          <li>Caso 02 · <a href="https://commons.wikimedia.org/wiki/File:%D0%A5%D0%BB%D0%B5%D0%B1%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD_%D0%BD%D0%B0_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%BC_%D1%83%D0%B3%D0%BB%D1%83_%D0%A5%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%B8_%D0%BD%D0%B0_%D0%A5%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BA%D0%B5_-_panoramio_(1).jpg" target="_blank" rel="noopener">Tienda de pan en la plaza Jitrovskaya, Moscú</a> — krassotkin, CC BY 3.0. <a href="https://commons.wikimedia.org/wiki/File:Moscow,_vending_machines_near_Severyaninsky_Bridge_(20624822954).jpg" target="_blank" rel="noopener">Quiosco automático «Всё сам», Moscú</a> — Gennady Grachev, CC BY 2.0. <a href="https://commons.wikimedia.org/wiki/File:Business_Center_B01,_STMK.jpg" target="_blank" rel="noopener">Fachada de vidrio</a> — Ivan Shalenko, CC BY-SA 4.0. <a href="https://commons.wikimedia.org/wiki/File:Sparrow_Hills_Cableway_2018_Aug_(3598).jpg" target="_blank" rel="noopener">Teleférico de Vorobiovy Gory, Moscú</a> — Alexey V. Kurochkin, CC BY-SA 4.0.</li>
-          <li>Caso 03 · <a href="https://commons.wikimedia.org/wiki/File:Kutuzov_prospectus,_Look_from_the_window_at_night,_Moscow_-_panoramio.jpg" target="_blank" rel="noopener">Kutúzovski prospekt desde la ventana, de noche, Moscú</a> — Pavel Shulekin, CC BY 3.0. Teleférico: Alexey V. Kurochkin, CC BY-SA 4.0.</li>
+          <li>Случай 01 · <a href="https://commons.wikimedia.org/wiki/File:%D0%A1%D0%A1%D0%A1%D0%A0,_1973,_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2-%D0%BD%D0%B0-%D0%94%D0%BE%D0%BD%D1%83,_%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BE%D1%8E%D0%B7,_%D0%A1%D0%B5%D0%BC%D0%B5%D0%B9%D0%BD%D1%8B%D0%B9_%D0%BF%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D1%83%D0%B6%D0%B8%D0%BD,_Soviet_Union.jpg" target="_blank" rel="noopener">«Семейный праздничный ужин», СССР, 1973</a> и <a href="https://commons.wikimedia.org/wiki/File:%D0%A1%D0%A1%D0%A1%D0%A0,_1973,_%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2-%D0%BD%D0%B0-%D0%94%D0%BE%D0%BD%D1%83,_%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BE%D1%8E%D0%B7,_%D0%A1%D0%B5%D0%BC%D0%B5%D0%B9%D0%BD%D1%8B%D0%B9_%D1%83%D0%B6%D0%B8%D0%BD,_Soviet_Union.jpg" target="_blank" rel="noopener">«Семейный ужин»</a> — Вячеслав Аргенберг, CC BY 4.0 (сняты в Ростове-на-Дону). <a href="https://commons.wikimedia.org/wiki/File:Bouquet_de_fleurs_dans_un_vase_-_btv1b530787820.jpg" target="_blank" rel="noopener">Букет цветов</a> — Agence Rol, общественное достояние. <a href="https://commons.wikimedia.org/wiki/File:Kerze_2007k.JPG" target="_blank" rel="noopener">Свеча</a> — Duftkerze, общественное достояние. <a href="https://commons.wikimedia.org/wiki/File:Shishkin,_Ivan_-_Morning_in_a_Pine_Forest.jpg" target="_blank" rel="noopener">«Утро в сосновом лесу»</a> — Иван Шишкин и Константин Савицкий, общественное достояние.</li>
+          <li>Случай 02 · <a href="https://commons.wikimedia.org/wiki/File:%D0%A5%D0%BB%D0%B5%D0%B1%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD_%D0%BD%D0%B0_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BE-%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%BC_%D1%83%D0%B3%D0%BB%D1%83_%D0%A5%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%B8_%D0%BD%D0%B0_%D0%A5%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BA%D0%B5_-_panoramio_(1).jpg" target="_blank" rel="noopener">Хлебный магазин на Хитровской площади, Москва</a> — krassotkin, CC BY 3.0. <a href="https://commons.wikimedia.org/wiki/File:Moscow,_vending_machines_near_Severyaninsky_Bridge_(20624822954).jpg" target="_blank" rel="noopener">Автоматический киоск «Всё сам», Москва</a> — Gennady Grachev, CC BY 2.0. <a href="https://commons.wikimedia.org/wiki/File:Business_Center_B01,_STMK.jpg" target="_blank" rel="noopener">Стеклянный фасад</a> — Ivan Shalenko, CC BY-SA 4.0. <a href="https://commons.wikimedia.org/wiki/File:Sparrow_Hills_Cableway_2018_Aug_(3598).jpg" target="_blank" rel="noopener">Канатная дорога на Воробьёвых горах, Москва</a> — Alexey V. Kurochkin, CC BY-SA 4.0.</li>
+          <li>Случай 03 · <a href="https://commons.wikimedia.org/wiki/File:Kutuzov_prospectus,_Look_from_the_window_at_night,_Moscow_-_panoramio.jpg" target="_blank" rel="noopener">Кутузовский проспект из окна ночью, Москва</a> — Pavel Shulekin, CC BY 3.0. Канатная дорога: Alexey V. Kurochkin, CC BY-SA 4.0.</li>
         </ul>
-        <p>Licencias: <a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank" rel="noopener">CC BY 4.0</a> · <a href="https://creativecommons.org/licenses/by/3.0/deed.es" target="_blank" rel="noopener">CC BY 3.0</a> · <a href="https://creativecommons.org/licenses/by/2.0/deed.es" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+        <p>Лицензии: <a href="https://creativecommons.org/licenses/by/4.0/deed.ru" target="_blank" rel="noopener">CC BY 4.0</a> · <a href="https://creativecommons.org/licenses/by/3.0/deed.ru" target="_blank" rel="noopener">CC BY 3.0</a> · <a href="https://creativecommons.org/licenses/by/2.0/deed.ru" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
       </details>
-      <div class="hazard mono" aria-hidden="true"><span>&gt; ACCESO CONCEDIDO_</span></div>
+      <div class="hazard mono" aria-hidden="true"><span>&gt; ДОСТУП РАЗРЕШЁН_</span></div>
     </footer>
   </div>
 
   <!-- ============ VISTA DE CASO (secciones 03 · 04 · 05) ============ -->
   <div id="case" class="view case-view" hidden>
     <div class="case-bar">
-      <p class="crumbs mono"><a class="back" href="#recuerdos">← RECUERDOS</a> <i>/</i> <span class="code" id="case-code">EXP-01</span> <i>/</i> <span id="case-bar-title"></span></p>
+      <p class="crumbs mono"><a class="back" href="#recuerdos">← ВОСПОМИНАНИЯ</a> <i>/</i> <span class="code" id="case-code">EXP-01</span> <i>/</i> <span id="case-bar-title"></span></p>
       <ol class="stepper" id="stepper">
-        <li data-step="1"><button type="button"><b>/03</b><span>Testimonio</span></button></li>
-        <li data-step="2"><button type="button"><b>/04</b><span>¿Qué entendió la IA?</span></button></li>
-        <li data-step="3"><button type="button"><b>/05</b><span>La versión de quien lo vivió</span></button></li>
+        <li data-step="1"><button type="button"><b>/03</b><span>Свидетельство</span></button></li>
+        <li data-step="2"><button type="button"><b>/04</b><span>Что понял ИИ?</span></button></li>
+        <li data-step="3"><button type="button"><b>/05</b><span>Версия того, кто это пережил</span></button></li>
       </ol>
     </div>
 
@@ -223,48 +223,48 @@
       <div class="wrap testimony-grid">
         <article class="entry testimony" id="entry">
           <header class="entry-head mono">
-            <span class="rec"><i aria-hidden="true"></i>Testimonio escrito · recibido</span>
-            <span id="t-code">TESTIMONIO 01-A</span>
+            <span class="rec"><i aria-hidden="true"></i>Письменное свидетельство · получено</span>
+            <span id="t-code">СВИДЕТЕЛЬСТВО 01-A</span>
           </header>
           <div class="entry-id">
             <div class="entry-avatar" aria-hidden="true">
               <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="11"/><path d="M12 56c2-12 10-18 20-18s18 6 20 18"/></svg>
             </div>
             <div>
-              <p class="t-case mono" id="t-case">Caso 01</p>
+              <p class="t-case mono" id="t-case">Случай 01</p>
               <h1 class="t-title" id="t-title"></h1>
               <p class="t-category mono" id="t-category"></p>
             </div>
           </div>
-          <p class="entry-who mono"><span>La persona que lo vivió escribió:</span><span id="t-coords"></span></p>
+          <p class="entry-who mono"><span>Тот, кто это пережил, написал:</span><span id="t-coords"></span></p>
           <blockquote class="t-quote" id="t-quote"></blockquote>
           <footer class="entry-foot mono">
-            <span>Fuente humana · texto escrito por su protagonista</span>
-            <span class="stamp">Texto original</span>
+            <span>Человеческий источник · текст написан самим участником</span>
+            <span class="stamp">Оригинальный текст</span>
           </footer>
         </article>
 
         <div class="recon">
-          <p class="sec-num mono">/03 <span>Reconstrucción de la IA</span></p>
+          <p class="sec-num mono">/03 <span>Реконструкция ИИ</span></p>
           <div class="print">
             <div class="recon-frame frame-ai" id="recon-frame">
               <div class="recon-placeholder" id="recon-placeholder">
                 <span class="ph-grid"></span>
-                <p class="mono">El sistema ha recibido el testimonio.<br><small>La escena aún no ha sido reconstruida.</small></p>
+                <p class="mono">Система получила свидетельство.<br><small>Сцена ещё не реконструирована.</small></p>
               </div>
               <div class="recon-status mono" id="recon-status" hidden>
-                <span id="recon-phase">Analizando testimonio</span>
+                <span id="recon-phase">Анализ свидетельства</span>
                 <b id="recon-pct">0 %</b>
               </div>
             </div>
           </div>
           <div class="recon-meta mono" id="recon-meta">
-            <span>Modelo MNEMOS-7 · síntesis visual</span>
-            <span id="recon-fidelity">Esperando instrucciones</span>
+            <span>Модель MNEMOS-7 · визуальный синтез</span>
+            <span id="recon-fidelity">Ожидание инструкций</span>
           </div>
           <div class="recon-actions">
-            <button class="btn btn-solid" id="btn-reconstruct" type="button">Ver la reconstrucción de la IA <span class="arr" aria-hidden="true">↗</span></button>
-            <button class="btn btn-solid" id="btn-find" type="button" hidden>Buscar diferencias <span class="arr" aria-hidden="true">↗</span></button>
+            <button class="btn btn-solid" id="btn-reconstruct" type="button">Показать реконструкцию ИИ <span class="arr" aria-hidden="true">↗</span></button>
+            <button class="btn btn-solid" id="btn-find" type="button" hidden>Искать различия <span class="arr" aria-hidden="true">↗</span></button>
           </div>
         </div>
       </div>
@@ -274,13 +274,13 @@
     <section class="step step-find" data-step="2" hidden>
       <div class="wrap">
         <header class="sec-head find-head">
-          <p class="sec-num mono">/04 <span>¿Qué entendió la IA?</span></p>
+          <p class="sec-num mono">/04 <span>Что понял ИИ?</span></p>
           <div>
-            <h2 class="sec-title find-title">¿Notas algo extraño?</h2>
-            <p class="find-instr mono">Explora la imagen y selecciona los detalles que te llamen la atención.</p>
+            <h2 class="sec-title find-title">Замечаешь что-то странное?</h2>
+            <p class="find-instr mono">Рассмотри изображение и выбери детали, которые привлекают твоё внимание.</p>
           </div>
           <div class="counter" id="counter" aria-live="polite">
-            <span class="counter-label mono">DIFERENCIAS</span>
+            <span class="counter-label mono">РАЗЛИЧИЯ</span>
             <span class="counter-num"><b id="count">0</b>/3</span>
             <span class="counter-dots"><i></i><i></i><i></i></span>
           </div>
@@ -291,9 +291,9 @@
         <ul class="found-list" id="found-list" aria-live="polite"></ul>
         <div class="complete" id="complete" hidden>
           <div class="complete-rings" aria-hidden="true"><i></i><i></i><i></i></div>
-          <h3>¡Has encontrado todas las diferencias!</h3>
-          <p>¿Te gustaría descubrir cómo era realmente este recuerdo para la persona que lo vivió?</p>
-          <button class="btn btn-dark" id="btn-reveal" type="button">Descubrir el recuerdo original <span class="arr" aria-hidden="true">↗</span></button>
+          <h3>Все различия найдены!</h3>
+          <p>Хочешь узнать, каким это воспоминание было на самом деле для того, кто его пережил?</p>
+          <button class="btn btn-dark" id="btn-reveal" type="button">Открыть оригинальное воспоминание <span class="arr" aria-hidden="true">↗</span></button>
         </div>
       </div>
     </section>
@@ -302,33 +302,33 @@
     <section class="step step-original" data-step="3" hidden>
       <div class="wrap">
         <header class="sec-head orig-head">
-          <p class="sec-num mono">/05 <span>La versión de quien lo vivió</span></p>
+          <p class="sec-num mono">/05 <span>Версия того, кто это пережил</span></p>
           <h2 class="sec-title orig-title" id="orig-title"></h2>
         </header>
         <p class="orig-text" id="orig-text"></p>
 
         <div class="print print-lg">
-          <div class="compare" id="compare" role="slider" tabindex="0" aria-label="Comparar reconstrucción y recuerdo original" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <div class="compare" id="compare" role="slider" tabindex="0" aria-label="Сравнить реконструкцию и оригинальное воспоминание" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
             <div class="cmp-layer cmp-ai" id="cmp-ai"></div>
             <div class="cmp-layer cmp-real memory" id="cmp-real"></div>
             <div class="cmp-handle" aria-hidden="true"><span>⟷</span></div>
-            <span class="cmp-label cmp-label-ai mono">Reconstrucción IA</span>
-            <span class="cmp-label cmp-label-real mono">Recuerdo original</span>
+            <span class="cmp-label cmp-label-ai mono">Реконструкция ИИ</span>
+            <span class="cmp-label cmp-label-real mono">Оригинальное воспоминание</span>
           </div>
         </div>
-        <div class="cmp-controls mono" role="group" aria-label="Vista">
-          <button type="button" data-pos="100">Reconstrucción IA</button>
-          <button type="button" data-pos="50" class="is-on">Comparar</button>
-          <button type="button" data-pos="0">Recuerdo original</button>
+        <div class="cmp-controls mono" role="group" aria-label="Вид">
+          <button type="button" data-pos="100">Реконструкция ИИ</button>
+          <button type="button" data-pos="50" class="is-on">Сравнить</button>
+          <button type="button" data-pos="0">Оригинальное воспоминание</button>
         </div>
 
         <div class="errors" id="errors"></div>
 
-        <nav class="case-next" aria-label="Continuar">
+        <nav class="case-next" aria-label="Продолжить">
           <div class="mini-cases mono" id="mini-cases"></div>
           <div class="case-next-actions">
-            <a class="btn btn-solid" id="btn-next" href="#caso-02"><span class="btn-ico" aria-hidden="true"></span>Siguiente recuerdo</a>
-            <a class="btn btn-ghost" href="#reflexion" id="btn-to-reflection"><span class="btn-ico" aria-hidden="true"></span>Ir a la reflexión final</a>
+            <a class="btn btn-solid" id="btn-next" href="#caso-02"><span class="btn-ico" aria-hidden="true"></span>Следующее воспоминание</a>
+            <a class="btn btn-ghost" href="#reflexion" id="btn-to-reflection"><span class="btn-ico" aria-hidden="true"></span>К заключительному размышлению</a>
           </div>
         </nav>
       </div>
