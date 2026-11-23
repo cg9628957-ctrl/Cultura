@@ -17,33 +17,33 @@
       n: 1,
       code: 'EXP-01',
       scene: 'dinner',
-      title: 'Lo que permanece en la mesa',
-      category: 'Recuerdo familiar',
-      desc: 'Una cena familiar en casa de los abuelos.',
+      title: 'То, что остаётся на столе',
+      category: 'Семейное воспоминание',
+      desc: 'Семейный ужин в доме бабушки и дедушки.',
       coords: '55.7338° N · 37.6270° E',
-      testimony: 'Recuerdo las cenas en casa de mis abuelos, en Moscú. Toda la familia se reunía alrededor de una mesa sencilla de madera para comer y conversar. Mi abuela siempre se encargaba de preparar la comida y, sobre la mesa, solo estaban los platos y lo que ella había servido. Mi abuelo acostumbraba sentarse junto a la ventana. Casi nunca hablaba, prefería observarnos mientras compartíamos. Recuerdo especialmente ese lugar junto a la ventana porque, aunque no decía mucho, siempre estaba presente.',
-      explanation: 'Esta es la versión de quien vivió ese momento. Aunque la reconstrucción parecía representar una reunión familiar, la IA modificó algunos detalles importantes de la experiencia, como la actitud del abuelo y los elementos que estaban presentes en la mesa.',
+      testimony: 'Я помню ужины в доме бабушки и дедушки в Москве. Вся семья собиралась вокруг простого деревянного стола, чтобы поесть и поговорить. Еду всегда готовила бабушка, и на столе были только тарелки и то, что она подала. Дедушка обычно садился у окна. Он почти никогда не говорил — предпочитал смотреть на нас, пока мы были вместе. Особенно я помню это место у окна, потому что, хотя он говорил немного, он всегда был рядом.',
+      explanation: 'Это версия того, кто пережил этот момент. Хотя реконструкция, казалось бы, изображала семейную встречу, ИИ изменил некоторые важные детали этого опыта — например, поведение дедушки и то, что было на столе.',
       diffs: [
         {
           areas: [{ x: 280, y: 185, w: 205, h: 270 }],
-          label: 'El abuelo sonríe y conversa',
-          ai: 'La IA muestra al abuelo de frente, sonriendo y participando en la conversación con todos.',
-          real: 'En realidad, casi nunca hablaba: permanecía de perfil, en silencio, observando a su familia.',
-          quote: 'Casi nunca hablaba, prefería observarnos mientras compartíamos.'
+          label: 'Дедушка улыбается и разговаривает',
+          ai: 'ИИ показывает дедушку анфас: он улыбается и участвует в общем разговоре.',
+          real: 'На самом деле он почти никогда не говорил: сидел в профиль, молча, наблюдая за семьёй.',
+          quote: 'Он почти никогда не говорил — предпочитал смотреть на нас, пока мы были вместе.'
         },
         {
           areas: [{ x: 0, y: 0, w: 1075, h: 190 }, { x: 0, y: 190, w: 280, h: 290 }],
-          label: 'La ventana ha desaparecido',
-          ai: 'La reconstrucción omite la gran ventana y la sustituye por una pared empapelada con un cuadro y apliques de luz.',
-          real: 'El abuelo acostumbraba sentarse junto a la ventana; era el lugar que mejor lo recordaba.',
-          quote: 'Recuerdo especialmente ese lugar junto a la ventana porque, aunque no decía mucho, siempre estaba presente.'
+          label: 'Окно исчезло',
+          ai: 'Реконструкция убирает большое окно и заменяет его стеной в обоях с картиной и бра.',
+          real: 'Дедушка обычно садился у окна; именно это место лучше всего напоминало о нём.',
+          quote: 'Особенно я помню это место у окна, потому что, хотя он говорил немного, он всегда был рядом.'
         },
         {
           areas: [{ x: 782, y: 358, w: 247, h: 270 }, { x: 1045, y: 520, w: 125, h: 135 }],
-          label: 'Flores y velas sobre la mesa',
-          ai: 'La IA agrega un ramo de flores en un jarrón y dos velas encendidas que nunca estuvieron en la mesa.',
-          real: 'Sobre la mesa solo estaban los platos y la comida que había preparado la abuela.',
-          quote: 'Sobre la mesa, solo estaban los platos y lo que ella había servido.'
+          label: 'Цветы и свечи на столе',
+          ai: 'ИИ добавляет букет цветов в вазе и две зажжённые свечи, которых никогда не было на столе.',
+          real: 'На столе были только тарелки и еда, которую приготовила бабушка.',
+          quote: 'На столе были только тарелки и то, что она подала.'
         }
       ]
     },
@@ -51,33 +51,33 @@
       n: 2,
       code: 'EXP-02',
       scene: 'street',
-      title: 'La calle donde crecí',
-      category: 'Recuerdo urbano',
-      desc: 'Una calle de las zonas bajas de Moscú antes de su transformación.',
+      title: 'Улица моего детства',
+      category: 'Городское воспоминание',
+      desc: 'Улица в нижних районах Москвы до её преображения.',
       coords: '55.6812° N · 37.7104° E',
-      testimony: 'Recuerdo las tardes en la calle donde crecí, en las zonas bajas de Moscú. Vivíamos en edificios pequeños, sencillos y algo deteriorados. Los niños jugábamos cerca de las entradas, mientras los vecinos conversaban en las aceras y algunas personas compraban en una pequeña tienda de barrio, atendida por su dueño. En aquella época todavía no existían las rutas de transporte aéreo que hoy atraviesan esa parte de la ciudad. Era un lugar humilde, pero siempre estaba lleno de vida. Hoy, en su lugar, se levantan enormes edificios y construcciones modernas.',
-      explanation: 'Esta es la versión de quien vivió ese momento. Aunque la reconstrucción parecía representar aquella calle, la IA incorporó elementos propios de su época al intentar recrear el pasado, modificando pequeños detalles de cómo era realmente ese lugar.',
+      testimony: 'Я помню вечера на улице моего детства, в нижних районах Москвы. Мы жили в небольших, простых и немного обветшалых домах. Мы, дети, играли у подъездов, соседи разговаривали на тротуарах, а кто-то делал покупки в маленьком районном магазине, где за прилавком стоял сам хозяин. В то время ещё не было воздушных транспортных линий, которые сегодня пересекают эту часть города. Это было скромное место, но оно всегда было полно жизни. Сегодня на его месте стоят огромные здания и современные постройки.',
+      explanation: 'Это версия того, кто пережил этот момент. Хотя реконструкция, казалось бы, изображала ту самую улицу, ИИ, пытаясь воссоздать прошлое, добавил элементы своего времени и изменил мелкие детали того, каким это место было на самом деле.',
       diffs: [
         {
           areas: [{ x: 0, y: 0, w: 860, h: 292 }, { x: 858, y: 0, w: 196, h: 680 }, { x: 0, y: 612, w: 860, h: 296 }],
-          label: 'Fachadas de lujo',
-          ai: 'El edificio aparece con fachada de vidrio, remates dorados, mármol y un zócalo de granito pulido.',
-          real: 'Eran edificios pequeños, sencillos y algo deteriorados, propios de las zonas bajas.',
-          quote: 'Vivíamos en edificios pequeños, sencillos y algo deteriorados.'
+          label: 'Роскошные фасады',
+          ai: 'Здание показано со стеклянным фасадом, золочёной отделкой, мрамором и цоколем из полированного гранита.',
+          real: 'Это были небольшие, простые и немного обветшалые дома, типичные для нижних районов.',
+          quote: 'Мы жили в небольших, простых и немного обветшалых домах.'
         },
         {
           areas: [{ x: 104, y: 290, w: 626, h: 322 }],
-          label: 'Una tienda automatizada',
-          ai: 'La tienda «Хлеб · Продукты» se convierte en un quiosco automático abierto 24/7, sin nadie que lo atienda.',
-          real: 'Era una pequeña tienda de pan y productos, en un edificio sencillo, atendida por su dueño.',
-          quote: 'Algunas personas compraban en una pequeña tienda de barrio, atendida por su dueño.'
+          label: 'Автоматизированный магазин',
+          ai: 'Магазин «Хлеб · Продукты» превращается в круглосуточный автоматический киоск без единого продавца.',
+          real: 'Это был маленький магазин хлеба и продуктов в простом здании, где торговал сам хозяин.',
+          quote: 'Кто-то делал покупки в маленьком районном магазине, где за прилавком стоял сам хозяин.'
         },
         {
           areas: [{ x: 1000, y: 28, w: 600, h: 140 }],
-          label: 'Cabinas sobre la calle',
-          ai: 'Aparecen cabinas de transporte aéreo cruzando el cielo de la calle.',
-          real: 'En aquella época esas estructuras todavía no existían: el cielo estaba despejado.',
-          quote: 'En aquella época todavía no existían las rutas de transporte aéreo que hoy atraviesan esa parte de la ciudad.'
+          label: 'Кабины над улицей',
+          ai: 'Над улицей появляются кабины воздушного транспорта.',
+          real: 'В то время этих конструкций ещё не существовало: небо было чистым.',
+          quote: 'В то время ещё не было воздушных транспортных линий, которые сегодня пересекают эту часть города.'
         }
       ]
     },
@@ -85,44 +85,44 @@
       n: 3,
       code: 'EXP-03',
       scene: 'blackout',
-      title: 'La noche sin luz',
-      category: 'Acontecimiento colectivo (testimonio individual)',
-      shortCategory: 'Acontecimiento colectivo',
-      desc: 'Un apagón que dejó sin electricidad a un sector de Moscú.',
+      title: 'Ночь без света',
+      category: 'Коллективное событие (личное свидетельство)',
+      shortCategory: 'Коллективное событие',
+      desc: 'Блэкаут, оставивший без электричества один из районов Москвы.',
       coords: '55.7963° N · 37.5389° E',
-      testimony: 'Recuerdo aquella noche en la que una falla eléctrica dejó sin luz nuestro sector de Moscú. Desde la ventana de mi apartamento podía ver los edificios y las calles a oscuras. Solo algunas ventanas conservaban una luz tenue, porque los vecinos habían encendido pequeñas lámparas de emergencia. Los grandes anuncios luminosos de los edificios se apagaron por completo y las cabinas del transporte aéreo dejaron de circular. Nunca había visto la ciudad así.',
-      explanation: 'Esta es la versión de quien vivió esa noche. Aunque la IA logró representar el apagón, no interpretó correctamente sus efectos: mantuvo activos algunos sistemas de la ciudad y confundió la luz de emergencia con la iluminación eléctrica habitual.',
+      testimony: 'Я помню ту ночь, когда авария в электросети оставила без света наш район Москвы. Из окна моей квартиры были видны тёмные дома и улицы. Лишь в некоторых окнах горел тусклый свет: соседи зажгли небольшие аварийные лампы. Большие светящиеся вывески на зданиях полностью погасли, а кабины воздушного транспорта перестали ходить. Город никогда ещё не был для меня таким.',
+      explanation: 'Это версия того, кто пережил ту ночь. Хотя ИИ сумел изобразить блэкаут, он неверно истолковал его последствия: оставил работающими некоторые городские системы и спутал аварийный свет с обычным электрическим освещением.',
       diffs: [
         {
           areas: [{ x: 1095, y: 345, w: 210, h: 140 }, { x: 1145, y: 595, w: 280, h: 60 }],
-          label: 'Luces publicitarias encendidas',
-          ai: 'Las torres conservan sus coronas de luces LED y un letrero comercial sigue iluminado en plena falla eléctrica.',
-          real: 'Durante el apagón, los grandes anuncios luminosos dejaron de funcionar.',
-          quote: 'Los grandes anuncios luminosos de los edificios se apagaron por completo.'
+          label: 'Рекламные огни горят',
+          ai: 'Башни сохраняют светодиодные короны, а коммерческая вывеска продолжает светиться посреди аварии.',
+          real: 'Во время блэкаута большие светящиеся вывески перестали работать.',
+          quote: 'Большие светящиеся вывески на зданиях полностью погасли.'
         },
         {
           areas: [{ x: 1165, y: 495, w: 100, h: 85 }],
-          label: 'Una ventana con luz eléctrica',
-          ai: 'Una ventana aparece iluminada intensamente con luz blanca, como si tuviera electricidad normal.',
-          real: 'La luz era tenue y cálida: provenía de una pequeña lámpara de emergencia.',
-          quote: 'Solo algunas ventanas conservaban una luz tenue, porque los vecinos habían encendido pequeñas lámparas de emergencia.'
+          label: 'Окно с электрическим светом',
+          ai: 'Одно окно ярко освещено белым светом, как будто там есть обычное электричество.',
+          real: 'Свет был тусклым и тёплым: он шёл от маленькой аварийной лампы.',
+          quote: 'Лишь в некоторых окнах горел тусклый свет: соседи зажгли небольшие аварийные лампы.'
         },
         {
           areas: [{ x: 510, y: 175, w: 680, h: 100 }],
-          label: 'Cabinas en circulación',
-          ai: 'Las cabinas del transporte aéreo aparecen circulando, con luces y estelas de movimiento.',
-          real: 'Durante el apagón, las cabinas quedaron detenidas y a oscuras.',
-          quote: 'Las cabinas del transporte aéreo dejaron de circular.'
+          label: 'Кабины в движении',
+          ai: 'Кабины воздушного транспорта движутся, оставляя за собой огни и световые следы.',
+          real: 'Во время блэкаута кабины остановились и стояли в темноте.',
+          quote: 'Кабины воздушного транспорта перестали ходить.'
         }
       ]
     }
   ];
 
   const MISS_MSGS = [
-    'Ese detalle parece coincidir con el testimonio. Sigue explorando.',
-    'Nada extraño aquí. Observa la imagen con más atención.',
-    'La reconstrucción parece fiel en esta zona. Busca en otra parte.',
-    'Vuelve a pensar en el testimonio y sigue buscando.'
+    'Эта деталь, похоже, совпадает со свидетельством. Продолжай искать.',
+    'Здесь ничего странного. Присмотрись к изображению внимательнее.',
+    'В этой области реконструкция кажется точной. Поищи в другом месте.',
+    'Вспомни свидетельство и продолжай поиски.'
   ];
 
   /* ---------------------------------------------------------------------
@@ -252,9 +252,9 @@
     memos.innerHTML = CASES.map((c, i) => {
       const L = LAYOUT[i];
       return `
-      <button class="memo" type="button" data-case="${c.n}" aria-label="Caso ${pad(c.n)}: ${c.title}"
+      <button class="memo" type="button" data-case="${c.n}" aria-label="Случай ${pad(c.n)}: ${c.title}"
         style="--x:${L.x};--y:${L.y};--w:${L.w};--r:${L.r};--mx:${L.mx};--my:${L.my};--mw:${L.mw};--z:${L.z}">
-        <span class="memo-flag" data-status="${c.n}" hidden>Explorado</span>
+        <span class="memo-flag" data-status="${c.n}" hidden>Изучено</span>
         <span class="memo-paper">
           <img src="${S.IMAGES[c.scene].ai}" alt="" loading="lazy">
           <span class="memo-cap mono"><span>${c.code} · ${c.shortCategory || c.category}</span><span>${c.coords.split(' · ')[0]}</span></span>
@@ -265,7 +265,7 @@
 
     const sheet = $('#contact-sheet');
     sheet.innerHTML = CASES.map((c) => `
-      <figure class="sheet-item"><div class="sheet-img memory"></div><figcaption>${c.code} · versión de quien lo vivió</figcaption></figure>`).join('');
+      <figure class="sheet-item"><div class="sheet-img memory"></div><figcaption>${c.code} · версия того, кто это пережил</figcaption></figure>`).join('');
     $$('.sheet-img', sheet).forEach((el, i) => renderScene(el, CASES[i].scene, 'real', { fit: 'slice' }));
   }
 
@@ -287,11 +287,11 @@
       return;
     }
     const c = CASES[n - 1];
-    $('#info-title').textContent = 'Caso ' + pad(c.n);
+    $('#info-title').textContent = 'Случай ' + pad(c.n);
     $('#info-name').textContent = c.title;
     $('#info-desc').textContent = c.desc;
     $('#info-cat').textContent = c.category + '.';
-    $('#info-meta').textContent = c.code + ' · ' + c.coords + (getDone().has(c.n) ? ' · explorado' : '');
+    $('#info-meta').textContent = c.code + ' · ' + c.coords + (getDone().has(c.n) ? ' · изучено' : '');
     $('#info-open').href = caseHash(c.n);
     info.hidden = false;
     requestAnimationFrame(() => requestAnimationFrame(() => info.classList.add('show')));
@@ -320,8 +320,8 @@
     const rp = $('#reflection-progress');
     if (rp) {
       rp.textContent = done.size === 3
-        ? 'Has explorado los tres recuerdos'
-        : `Recuerdos explorados: ${done.size} de 3`;
+        ? 'Все три воспоминания изучены'
+        : `Изучено воспоминаний: ${done.size} из 3`;
     }
   }
 
@@ -350,11 +350,11 @@
 
     $('#case-code').textContent = c.code;
     $('#case-bar-title').textContent = c.title;
-    $('#t-code').textContent = 'Testimonio ' + pad(c.n) + '-A';
+    $('#t-code').textContent = 'Свидетельство ' + pad(c.n) + '-A';
     $('#t-coords').textContent = c.coords;
-    $('#t-case').textContent = 'Caso ' + pad(c.n);
+    $('#t-case').textContent = 'Случай ' + pad(c.n);
     $('#t-title').textContent = c.title;
-    $('#t-category').textContent = 'Categoría: ' + c.category + '.';
+    $('#t-category').textContent = 'Категория: ' + c.category + '.';
     playTestimony(c.testimony);
 
     // Reiniciar el panel de reconstrucción
@@ -364,7 +364,7 @@
     if (old) old.remove();
     $('#recon-placeholder').hidden = false;
     $('#recon-status').hidden = true;
-    $('#recon-fidelity').textContent = 'Esperando instrucciones';
+    $('#recon-fidelity').textContent = 'Ожидание инструкций';
     $('#recon-fidelity').classList.remove('ok');
     $('#btn-reconstruct').hidden = false;
     $('#btn-reconstruct').disabled = false;
@@ -375,7 +375,7 @@
     view.hidden = false;
     view.style.animation = 'none'; void view.offsetWidth; view.style.animation = '';
     goStep(1, true);
-    document.title = c.title + ' · ¿Así lo recuerdas?';
+    document.title = c.title + ' · Ты так это помнишь?';
   }
 
   /* Testimonio escrito: el texto de quien lo vivió aparece en pantalla
@@ -429,7 +429,7 @@
     frame.insertBefore(svg, frame.firstChild);
     frame.classList.add('developing');
 
-    const phases = ['Analizando testimonio', 'Identificando elementos clave', 'Completando detalles faltantes', 'Renderizando escena'];
+    const phases = ['Анализ свидетельства', 'Поиск ключевых элементов', 'Дополнение недостающих деталей', 'Рендеринг сцены'];
     const status = $('#recon-status');
     status.hidden = false;
     const dur = reduceMotion ? 1 : 3400, t0 = performance.now();
@@ -442,7 +442,7 @@
         clearInterval(state.reconTimer);
         state.reconstructed = true;
         status.hidden = true;
-        $('#recon-fidelity').textContent = 'Reconstrucción completada · fidelidad estimada 96,4 %';
+        $('#recon-fidelity').textContent = 'Реконструкция завершена · оценка точности 96,4 %';
         $('#recon-fidelity').classList.add('ok');
         $('#btn-reconstruct').hidden = true;
         $('#btn-find').hidden = false;
@@ -486,10 +486,10 @@
       if (state.found.size === 3) {
         finish();
       } else {
-        toast('Diferencia encontrada: ' + c.diffs[i].label + '.', true);
+        toast('Найдено различие: ' + c.diffs[i].label + '.', true);
       }
     } else if (i !== null) {
-      toast('Ya encontraste este detalle. Busca otro.');
+      toast('Эта деталь уже найдена. Ищи другую.');
     } else {
       const k = Math.min(2.6, Math.max(1, 820 / (svg.getBoundingClientRect().width || 900)));
       const ring = svgEl('circle', { class: 'miss', cx: p.x, cy: p.y, r: 46 * k, style: 'stroke-width:' + (3 * k).toFixed(1) });
@@ -504,7 +504,7 @@
     const c = state.c;
     $('#found-list').innerHTML = c.diffs.map((d, i) => {
       const on = state.found.has(i);
-      return `<li class="${on ? 'on' : ''}"><b>${pad(i + 1)}</b><span>${on ? d.label : 'Diferencia por descubrir'}</span></li>`;
+      return `<li class="${on ? 'on' : ''}"><b>${pad(i + 1)}</b><span>${on ? d.label : 'Различие ещё не найдено'}</span></li>`;
     }).join('');
     void justFound;
   }
@@ -524,7 +524,7 @@
     frame.classList.add('is-complete');
     $$('#stepper li')[2].classList.remove('is-locked');
     $$('#stepper li')[1].classList.add('is-done');
-    toast('¡Has encontrado las tres diferencias!', true);
+    toast('Все три различия найдены!', true);
     setTimeout(() => {
       const box = $('#complete');
       box.hidden = false;
@@ -548,11 +548,11 @@
         <div class="err-ai">
           <span class="err-num">${pad(i + 1)}</span>
           <h4>${d.label}</h4>
-          <span class="err-tag">Lo que mostró la IA</span>
+          <span class="err-tag">Что показал ИИ</span>
           <p>${d.ai}</p>
         </div>
         <div class="err-real paper">
-          <span class="err-tag">Lo que recuerda quien lo vivió</span>
+          <span class="err-tag">Что помнит тот, кто это пережил</span>
           <p>${d.real}</p>
           <blockquote>«${d.quote}»</blockquote>
         </div>
@@ -572,7 +572,7 @@
     const allDone = next === null;
     if (allDone) next = (c.n % 3) + 1;
     btnNext.href = caseHash(next);
-    btnNext.lastChild.textContent = allDone ? 'Revisar otro recuerdo' : 'Siguiente recuerdo: ' + CASES[next - 1].title;
+    btnNext.lastChild.textContent = allDone ? 'Посмотреть другое воспоминание' : 'Следующее воспоминание: ' + CASES[next - 1].title;
     $('#btn-to-reflection').classList.toggle('btn-solid', allDone);
   }
 
@@ -581,7 +581,7 @@
     const cmp = $('#compare');
     cmp.style.setProperty('--pos', p + '%');
     cmp.setAttribute('aria-valuenow', Math.round(p));
-    cmp.setAttribute('aria-valuetext', p > 66 ? 'Reconstrucción IA' : p < 34 ? 'Recuerdo original' : 'Comparación');
+    cmp.setAttribute('aria-valuetext', p > 66 ? 'Реконструкция ИИ' : p < 34 ? 'Оригинальное воспоминание' : 'Сравнение');
     $$('.cmp-controls button').forEach((b) => b.classList.toggle('is-on', +b.dataset.pos === Math.round(p)));
   }
 
@@ -622,7 +622,7 @@
     const wasHidden = home.hidden;
     $('#case').hidden = true;
     home.hidden = false;
-    document.title = '¿Así lo recuerdas? · Archivo de memoria · Moscú 2050';
+    document.title = 'Ты так это помнишь? · Архив памяти · Москва 2050';
     if (wasHidden) { home.style.animation = 'none'; void home.offsetWidth; home.style.animation = ''; }
     updateProgress();
     const target = targetId && document.getElementById(targetId);
@@ -651,7 +651,7 @@
     $$('#stepper li').forEach((li) => li.querySelector('button').addEventListener('click', () => {
       const k = +li.dataset.step;
       if (stepAllowed(k)) goStep(k);
-      else toast(k === 2 ? 'Primero genera la reconstrucción de la IA.' : 'Encuentra las tres diferencias para desbloquear este paso.');
+      else toast(k === 2 ? 'Сначала создай реконструкцию ИИ.' : 'Найди три различия, чтобы открыть этот шаг.');
     }));
     // Enlaces a la misma ruta (p. ej. pulsar "Recuerdos" estando ya ahí) también deben desplazar
     document.addEventListener('click', (e) => {
@@ -696,8 +696,8 @@
     { t: 'photo', v: 'img/caso1-real.jpg', x: 4, y: 14, fs: 120, o: .3, bl: 1, dz: 30, r: -8 },
     { t: 'photo', v: 'img/caso2-real.jpg', x: 82, y: 82, fs: 110, o: .26, bl: 2, dz: 28, r: 7 },
     { t: 'photo', v: 'img/caso3-real.jpg', x: 68, y: 6, fs: 96, o: .22, bl: 2, dz: 20, r: 4 },
-    { t: 'tag', v: 'FRAGMENTO 0347', x: 26, y: 76, o: .55, bl: 0, dz: 14 },
-    { t: 'tag', v: 'TESTIMONIO ESCRITO', x: 64, y: 54, o: .45, bl: 1, dz: 18 }
+    { t: 'tag', v: 'ФРАГМЕНТ 0347', x: 26, y: 76, o: .55, bl: 0, dz: 14 },
+    { t: 'tag', v: 'ПИСЬМЕННОЕ СВИДЕТЕЛЬСТВО', x: 64, y: 54, o: .45, bl: 1, dz: 18 }
   ];
 
   function initHero() {
