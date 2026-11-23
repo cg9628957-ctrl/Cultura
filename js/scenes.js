@@ -19,9 +19,9 @@
   };
 
   const LABELS = {
-    dinner: { ai: 'Reconstrucción por IA de una cena familiar', real: 'Fotografía original de una cena familiar' },
-    street: { ai: 'Reconstrucción por IA de una calle de Moscú', real: 'Fotografía original de una calle de Moscú' },
-    blackout: { ai: 'Reconstrucción por IA de la noche del apagón', real: 'La noche del apagón, tal como la recuerda quien la vivió' }
+    dinner: { ai: 'Реконструкция семейного ужина, созданная ИИ', real: 'Оригинальная фотография семейного ужина' },
+    street: { ai: 'Реконструкция московской улицы, созданная ИИ', real: 'Оригинальная фотография московской улицы' },
+    blackout: { ai: 'Реконструкция ночи блэкаута, созданная ИИ', real: 'Ночь блэкаута такой, какой её помнит тот, кто её пережил' }
   };
 
   function scene(key) {
