@@ -198,8 +198,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .plus::before { left: 6px; top: 0; width: 2px; height: 14px; } .plus::after { top: 6px; left: 0; height: 2px; width: 14px; }
 
 .hero-center { position: relative; z-index: 4; text-align: center; max-width: 1060px; padding: 60px var(--gutter) 90px; }
-.hero-kicker { display: inline-flex; gap: 12px; align-items: center; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--sand); padding: 6px 12px; border: 1px solid var(--line-2); background: rgba(14, 15, 16, .55); }
-.hero-kicker span { color: var(--accent); font-weight: 600; }
 .hero-title {
   margin: 30px 0 30px; font-family: var(--display); font-weight: 800; text-transform: uppercase;
   font-size: clamp(46px, 9.2vw, 138px); line-height: .92; letter-spacing: -.035em; color: var(--sand);
@@ -317,7 +315,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .sheet-img { position: relative; aspect-ratio: 16/10; overflow: hidden; }
 .sheet-img svg { width: 100%; height: 100%; }
 .sheet-item figcaption { position: absolute; left: 10px; right: 10px; bottom: 9px; font-family: var(--mono); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; color: var(--cloud); }
-.final-quote { position: relative; margin-top: 70px; background: var(--accent); color: var(--ink); padding: clamp(28px, 4vw, 56px); box-shadow: 10px 10px 0 var(--accent-2); }
+.final-quote { position: relative; margin-top: 70px; background: var(--accent); color: var(--ink); padding: clamp(28px, 4vw, 56px); }
 .fq-label { display: block; font-weight: 600; font-size: 11px; letter-spacing: .16em; margin-bottom: 16px; }
 .final-quote p { font-family: var(--display); font-weight: 800; font-size: clamp(22px, 3vw, 42px); line-height: 1.15; text-transform: uppercase; letter-spacing: -.01em; }
 .reflection-actions { display: flex; justify-content: center; margin-top: 56px; }
@@ -457,7 +455,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .found-list li.on { border: 1px solid var(--accent); background: rgba(0, 255, 167, .1); color: var(--sand); box-shadow: inset 4px 0 0 var(--accent); animation: stepIn .5s var(--ease); }
 .found-list li.on b { color: var(--accent); }
 
-.complete { position: relative; overflow: hidden; max-width: 600px; margin: 44px auto 0; padding: 30px 30px 26px; background: var(--accent); color: var(--ink); box-shadow: 10px 10px 0 var(--accent-2); animation: stepIn .7s var(--ease); }
+.complete { position: relative; overflow: hidden; max-width: 600px; margin: 44px auto 0; padding: 30px 30px 26px; background: var(--accent); color: var(--ink); animation: stepIn .7s var(--ease); }
 .complete h3 { position: relative; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.08; letter-spacing: -.01em; }
 .complete p { position: relative; font-family: var(--mono); font-size: 13px; margin: 12px 0 22px; }
 .complete-rings { position: absolute; right: 40px; top: 40px; pointer-events: none; }
